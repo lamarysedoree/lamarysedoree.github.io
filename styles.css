@@ -212,7 +212,8 @@ ul.submenu li a:hover {
   justify-content: center;
   padding: 20px;
   background-color: #FFFFE7;
-  text-align: left; /* Ajoutez cette ligne pour aligner le texte à gauche */
+  text-align: left; /* Alignement du texte à gauche */
+  box-sizing: border-box; /* Pour inclure padding dans la largeur */
 }
 
 .recette-unique .recette-card {
@@ -220,20 +221,25 @@ ul.submenu li a:hover {
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   border: 2px solid #FFD700; /* Bordure dorée de 2px */
-  width: 800px;
-  max-width: 90%;
+  width: 100%; /* Utiliser 100% pour s'adapter sur mobile */
+  max-width: 800px; /* Limite la largeur sur grands écrans */
   padding: 30px;
   color: #FFF8DC;
   font-family: 'Georgia', serif;
   font-size: 1.2em;
   position: relative;
   transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-  text-align: left; /* Ajoutez cette ligne pour aligner le texte à gauche */
+  box-sizing: border-box; /* Inclure padding et border dans la largeur */
+  margin: 0 auto; /* Centrer la carte horizontalement */
+  text-align: left; /* Texte aligné à gauche */
 }
+
+/* Effet hover */
 .recette-unique .recette-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.4);
 }
+
 
 /* Pied de page */
 footer {
@@ -530,6 +536,22 @@ p.quote {
   text-align: center;
 }
 
+/* Ajoutez cette règle à la fin de votre fichier styles.css */
+.btn-recette {
+  background-color: #DEA62B;; /* couleur dorée */
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 1.2em;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-recette:hover {
+  background-color: #B17E1E;  /* ton plus foncé au hover */
+  transform: scale(1.05);
+}
 /* ------------------------------------------- FIN DES STYLES GLOBAUX ------------------------------------------- */
 
 /* =========================== STYLES RESPONSIVE (pour mobiles et petits écrans) =========================== */
@@ -716,7 +738,7 @@ p.quote {
   }
 
     header img {
-    max-width: 670px;        
+    max-width: 500px;        
     height: auto;           /* Maintient les proportions originales */
     display: block;         /* Évite les espaces en ligne */
     object-fit: contain;    /* Optionnel : pour s'assurer que l'image reste complète dans le conteneur sans déformation */
