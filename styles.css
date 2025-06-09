@@ -1,0 +1,745 @@
+/* Style général du corps */
+body {
+    position: relative; /* Positionnement relatif pour les enfants positionnés absolument si besoin */
+    z-index: auto; /* Z-index par défaut */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Police de caractères principale */
+    background-color: #FFFFE7; /* Fond chocolat blanc */
+    color: #5E3200; /* Couleur chocolat par défaut */
+    line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
+    margin: 0; /* Enlève la marge par défaut du corps */
+    display: flex; /* Utilise Flexbox pour la mise en page globale */
+    flex-direction: column; /* Disposition verticale des éléments */
+    min-height: 100vh; /* Hauteur minimale : toute la fenêtre */
+}
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+/* Style du header */
+header {
+    background-color: #FFFFE7; /* Même fond que le body- chocolat blanc */
+    padding:0px; /* Espacement interne */
+    text-align: center; /* Centrer le texte */
+    color: #5E3200; /* Chocolat*/
+    font-size: 24px; /* Taille de la police */
+    margin-top: 90px; /* Espace au-dessus, pour décaler du haut fixe */
+	display: flex; /* ou block si tu préfères */
+	justify-content: center; /* pour centrer le contenu */
+	margin: 0 auto; /* pour centrer le header lui-même si sa largeur est définie */
+	width: 65%; /* ou une autre largeur appropriée */
+    max-width: 1200px; /* limite la largeur pour éviter qu'il ne s'étende trop */
+}
+
+/* Bandeau fixe en haut de la page */
+.bandeau {
+    position: fixed; /* Fixe en haut de la fenêtre */
+    top: 0; /* Position en haut */
+    width: 100%; /* Prend toute la largeur */
+    background-color: #5E3200; /* Fond chocolat) */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Ombre pour relief */
+    z-index: 1000; /* Sur le reste du contenu */
+    padding: 1rem 1rem; /* Espacement interne */
+}
+
+/* Menu de navigation */
+nav {
+    display: flex; /* Flexbox pour aligner les items horizontalement */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+}
+
+/* Liste du menu principale */
+ul.menu {
+    list-style: none; /* Supprimer les puces */
+    display: flex; /* Disposition horizontale */
+    margin: 0; /* Pas de marges */
+    padding: 0; /* Pas de padding */
+}
+
+/* Éléments de la liste du menu */
+ul.menu li {
+    position: relative; /* Nécessaire pour positionner le sous-menu en absolu */
+    margin: 0 15px; /* Espacement horizontal entre items */
+}
+
+/* Liens du menu */
+ul.menu li a {
+    text-decoration: none; /* Pas de soulignement */
+    color: #D4AF37; /* Doré */
+    font-weight: bold; /* Gras */
+    padding: 8px 12px; /* Espacement autour du texte */
+    transition: background 0.3s, color 0.3s; /* Transition douce pour hover */
+}
+
+/* Survol des liens du menu */
+ul.menu li a:hover {
+    background-color: #DEA62B; /* Couleur dorée */
+    border-radius: 4px; /* Coins arrondis */
+    color: #fff; /* Texte blanc au hover */
+}
+
+/* Sous-menu déroulant */
+ul.menu li ul.submenu {
+    display: none; /* Cacher par défaut */
+    position: absolute; /* Positionnement absolu par rapport au li parent */
+    top: 30px; /* Position verticale par rapport au parent */
+    left: 0; /* Aligné à gauche du parent */
+    background-color: #5E3200; /* Même couleur que le bandeau */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5); /* Ombre pour relief */
+    list-style: none; /* Pas de puces */
+    padding: 0; /* Pas de padding */
+    margin: 0; /* Pas de marge */
+    width: 140px; /* Largeur initiale */
+    border-radius: 4px; /* Coins arrondis */
+    z-index: 1001; /* Sur le menu principal */
+    transition: width 0.3s ease; /* Transition pour changement de largeur */
+}
+
+/* Affichage du sous-menu au survol */
+ul.menu li:hover ul.submenu {
+    display: block; /* Afficher le sous-menu */
+    width: 200px; /* Augmentation de la largeur lors du survol */
+}
+
+/* Items du sous-menu */
+ul.submenu li {
+    width: 100%; /* Prend toute la largeur du sous-menu */
+}
+
+/* Liens dans le sous-menu */
+ul.submenu li a {
+    padding: 4px 8px; /* Padding pour confort */
+    max-width: 180px; /* Limite la largeur */
+    display: inline-block; /* Respecte la largeur max */
+    color: #fff; /* Texte blanc */
+}
+
+/* Survol des liens du sous-menu */
+ul.submenu li a:hover {
+    background-color: #DEA62B; /* Couleur dorée au survol */
+    color: #fff; /* Texte blanc */
+}
+
+/* Container principal pour contenu */
+.content {
+    margin: 0 auto; /* Centrage horizontal */
+    width: 100%; /* Prend toute la largeur disponible */
+}
+.content h2 {
+    text-align: center;
+    color: #D4AF37;
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-shadow:
+        1px 1px 0 #999,
+        2px 2px 0 #666,
+        3px 3px 0 #333;
+}
+
+/* Section présentation dans .content */
+.intro {
+    width: 100%; /* Prend toute la largeur */
+    box-sizing: border-box; /* Inclut paddings et marges dans la largeur */
+    text-align: center; /* Centrer le texte */
+    margin-bottom: 1rem; /* Espace inférieur */
+	margin-top: 100px; /* Espace supérieur */
+}
+
+/* Titre dans intro */
+.intro h1 {
+    font-size: 2.5rem; /* Taille du titre */
+    margin-bottom: 1rem; /* Marges en dessous */
+    color: black; /* Noir */
+}
+
+/* Paragraphe dans intro */
+.intro p {
+    font-size: 1.2rem; /* Taille du texte */
+    max-width: 800px; /* Largeur maximale pour confort lecture */
+    margin: 0 auto 1.5rem; /* Centré avec marge inférieure */
+    color: black; /* Noir */
+}
+
+/* Section recettes, affichage flex pour mise en page en grille */
+.recette {
+    display: flex; /* Flexbox */
+    flex-wrap: wrap; /* Permet de passer à la ligne */
+    gap: 20px; /* Espacement entre cartes */
+    justify-content: center; /* Centrer horizontalement */
+}
+
+/* Carte d'un livre */
+.card {
+    background-color: #5E3200; /* chocolat */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.7); /* Ombre pour effet 3D */
+    width: 320px; /* Largeur fixe */
+    display: flex; /* Flexbox pour aligner contenu vertical */
+    flex-direction: column; /* Disposition verticale */
+    align-items: center; /* Centrer horizontalement */
+    padding: 15px; /* Padding intérieur */
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Transitions pour effets au survol */
+}
+
+/* Effet au survol de la carte */
+.card:hover {
+    transform: translateY(-5px); /* Légère élévation */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.9); /* Ombre plus accentuée */
+    background-color: #A56F4A; /* Nuance plus claire au survol */
+}
+
+/* Description de la recette */
+.description {
+    text-align: center; /* Centrer le texte */
+}
+
+.description h3 {
+    font-size: 1.2rem; /* Taille du titre */
+    margin-bottom: 0.5rem; /* Marges inférieures */
+    color: #fff; /* Blanc */
+}
+
+.description p {
+    font-size: 0.95rem; /* Taille du texte */
+    color: #ccc; /* Gris clair */
+}
+
+/* Style pour la section contenant la grande carte */
+.recette-unique {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #FFFFE7;
+  text-align: left; /* Ajoutez cette ligne pour aligner le texte à gauche */
+}
+
+.recette-unique .recette-card {
+  background: #5E3200; /* Fond chocolat */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  border: 2px solid #FFD700; /* Bordure dorée de 2px */
+  width: 800px;
+  max-width: 90%;
+  padding: 30px;
+  color: #FFF8DC;
+  font-family: 'Georgia', serif;
+  font-size: 1.2em;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  text-align: left; /* Ajoutez cette ligne pour aligner le texte à gauche */
+}
+.recette-unique .recette-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+/* Pied de page */
+footer {
+    width: 100%; /* Toute la largeur */
+    background-color: #5E3200; /* chocolat) */
+    padding: 5px 0; /* Padding vertical */
+    margin-top: 40px; /* Espace au-dessus */
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Disposition verticale */
+    align-items: center; /* Centrer contenu horizontal */
+	color: #FFFFE7; /* Chocolat blanc */
+}
+
+/* Paragraphe dans le footer */
+footer p {
+    text-align: center; /* Centrer le texte */
+	color:#FFFFE7; /* Chocolat blanc */	
+}
+
+/* Définition d'une police personnalisée pour titres */
+@font-face {
+    font-family: 'FairWaterScript'; /* Nom de la police */
+    src: url('fonts/FairWaterScript.woff2') format('woff2'), /* Fichier woff2 */
+         url('fonts/FairWaterScript.woff') format('woff'), /* Fichier woff */
+         url('fonts/FairWaterScript.ttf') format('truetype'); /* TTF fallback */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Style pour les titres principaux (h1) */
+h1 {
+    font-family: 'FairWaterScript', cursive, Arial, sans-serif; /* Police script + fallback */
+    font-size: 3em; /* Taille importante */
+    color: #5E3200; /* Couleur chocolat */
+    -webkit-text-stroke: 0.5px black; /* Contour noir pour un effet de style */
+    margin-bottom: 20px; /* Espace inférieur */
+}
+
+/* Style pour les sous-titres (h3) */
+h3 {
+    font-family: 'FairWaterScript', cursive, Arial, sans-serif;
+    font-size: 1.5em;
+    color: #5E3200; /* Couleur chocolat */
+    -webkit-text-stroke: 0.5px black;
+    margin-bottom: 20px;
+}
+
+/* Style pour les petits titres (h4) */
+h4 {
+    font-family: 'FairWaterScript', cursive, Arial, sans-serif;
+    font-size: 1.2em;
+    color: #5E3200; /* Couleur chocolat */
+    -webkit-text-stroke: 0.5px black;
+    margin-bottom: 20px;
+}
+
+.titre-blanc {
+    color: #FFFFE7 !important; /* Couleur chocolat blanc */
+    font-family: 'FairWaterScript', cursive, Arial, sans-serif;
+    font-size: 1.5em;
+    -webkit-text-stroke: 0.5px black;
+    margin-bottom: 20px;
+}
+
+.titre-blanc a {
+    color: #FFFFE7; /* Couleur chocolat blanc */
+    text-decoration: none; /* Pas de soulignement */
+    transition: color 0.3s;
+	font-size: 1.5em;
+}
+
+/* Classe pour styliser une image avec une bordure, des dimensions fixes, et un ajustement du contenu */
+.image-doree {
+    border: 4px solid #DEA62B; /* Ajoute une bordure de 4 pixels d'épaisseur, de couleur dorée autour de l'image */
+    width: 300px;               /* Fixe la largeur de l'image à 300 pixels */
+    height: 200px;              /* Fixe la hauteur de l'image à 200 pixels */
+    object-fit: cover;          /* L'image sera recadrée pour couvrir entièrement la zone définie, évitant la déformation */
+    display: block;             /* Convertit l'image en élément de type bloc, facilitant la gestion des marges */
+    margin: 10px auto;          /* Ajoute une marge verticale de 10px et centre horizontalement l'image */
+}
+
+  img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container pour les boutons sociaux */
+.social-buttons {
+    display: flex; /* Flexbox pour aligner boutons */
+    gap: 10px; /* Espacement entre boutons */
+    margin: 0 0; /* Marges verticales nulles */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+}
+
+/* Styles communs pour tous les boutons sociaux */
+.social-btn {
+    display: flex; /* Flex pour aligner contenu interne */
+    align-items: center; /* Centrer verticalement */
+    padding: 0 15px; /* Padding horizontal réduit */
+    font-size: 16px; /* Taille du texte */
+    color: #fff; /* Couleur blanche du texte */
+    text-decoration: none; /* Pas de soulignement */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s; /* Transition pour changement de fond au hover */
+}
+
+/* Couleurs spécifiques pour chaque plateforme */
+.social-btn.facebook {
+    background-color: #3b5998; /* Bleu Facebook */
+}
+.social-btn.twitter {
+    background-color: #55acee; /* Bleu Twitter */
+}
+
+/* Effet au survol des boutons sociaux */
+.social-btn:hover {
+    opacity: 0.8; /* Légère transparence au survol */
+}
+
+/* Icônes dans les boutons sociaux */
+.social-btn i {
+    margin-right: 8px; /* Espace entre icône et texte */
+    font-size: 20px; /* Taille des icônes */
+}
+
+/* Conteneur du formulaire de contact */
+.contact-container {
+    background-color: #5E3200; /* Fond chocolat) */
+    color: #D4AF37; /* Doré */
+    padding: 40px; /* Padding interne */
+    border-radius: 10px; /* Coins arrondis */
+    max-width: 500px; /* Largeur maximale */
+    width: 100%; /* Prend toute la largeur disponible */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Ombre légère */
+    margin: auto; /* Centrage horizontal et vertical */
+    margin-top: 100px; /* Espace au-dessus */
+}
+
+/* Titre du formulaire */
+h2 {
+    text-align: center;
+    color: #D4AF37;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-shadow:
+        1px 1px 0 #999,
+        2px 2px 0 #666,
+        3px 3px 0 #333;
+}
+
+/* Formulaire */
+form {
+    display: flex; /* Flexbox pour disposition verticale */
+    flex-direction: column; /* Colonne */
+}
+
+/* Labels du formulaire */
+label {
+    margin-bottom: 8px; /* Espace en dessous */
+    font-weight: bold; /* Gras */
+    color: #fff; /* Blanc */
+}
+
+/* Champs de saisie (text, email, textarea) */
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 12px; /* Padding intérieur */
+    margin-bottom: 20px; /* Espace en dessous */
+    border: 1px solid #ccc; /* Bordure grise claire */
+    border-radius: 4px; /* Coins arrondis */
+    font-family: inherit; /* Héritage de la police */
+    font-size: 1em; /* Taille du texte */
+    transition: border-color 0.3s; /* Transition pour changement de bordure */
+}
+
+/* Taille par défaut pour le textarea */
+textarea {
+  font-size: 1.2em; /* Taille de police plus grande pour tout le site */
+  padding: 15px; /* Padding augmentée pour confort */
+  height: 150px; /* Hauteur initiale */
+  width: 100%; /* Prend toute la largeur du conteneur */
+  box-sizing: border-box; /* Inclus padding et border dans la largeur */
+}
+
+/* Focus sur champs de saisie */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #D4AF37; /* Bordure dorée lors du focus */
+    outline: none; /* Pas de contour par défaut */
+}
+
+/* Bouton de soumission */
+button {
+    background-color: #D4AF37; /* Doré */
+    color: #fff; /* Texte blanc */
+    padding: 14px; /* Padding intérieur */
+    border: none; /* Pas de bordure */
+    border-radius: 4px; /* Coins arrondis */
+    font-size: 1em; /* Taille du texte */
+    cursor: pointer; /* Curseur pointeur */
+    transition: background-color 0.3s; /* Transition de fond */
+}
+
+/* Survol du bouton */
+button:hover {
+    background-color: #b8962f; /* Ton plus foncé en hover */
+}
+
+/* Message de confirmation ou d'erreur */
+.message {
+    margin-top: 15px; /* Espace supérieur */
+    text-align: center; /* Centrer le texte */
+    font-weight: bold; /* Gras */
+}
+
+/* Liens classiques */
+a {
+    text-decoration: none; /* Pas de soulignement */
+    color: #4B3832; /* Couleur brune */
+}
+
+/* Paragraphes */
+p {
+    max-width: 700px; /* Largeur maximale pour une lecture confortable */
+    margin: 20px auto; /* Centré avec marges verticales */
+    font-size: 18px; /* Taille confortable */
+    line-height: 1.8; /* Espacement pour lecture aisée */
+    color: #444; /* Couleur légèrement sombre */
+    text-align: justify; /* Justification du texte */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);/* Ajout d'une légère ombre pour relief */
+    hyphens: auto;/* Permet la césure automatique pour éviter les longues lignes non équilibrées. */
+    text-justify: inter-word;/* Justifie le texte en ajustant l'espacement entre les mots pour une meilleure apparence. */
+    word-break: break-word;/* Permet de couper les mots si nécessaire pour éviter le dépassement de la mise en page. */
+}
+
+/* Paragraphe d'introduction (exemple) */
+p.intro {
+    font-weight: bold; /* Texte en gras */
+    font-size: 20px; /* Taille légèrement plus grande */
+    color: #222; /* Couleur très sombre */
+    margin-bottom: 30px; /* Espace en dessous */
+}
+
+/* Citations ou extraits */
+p.quote {
+    font-style: italic; /* Italique */
+    background-color: #eef9f9; /* Fond léger */
+    padding: 15px; /* Padding intérieur */
+    border-left: 5px solid #a0c4c4; /* Bande à gauche */
+    margin: 30px 0; /* Marges verticales */
+    border-radius: 8px; /* Coins arrondis */
+    font-size: 19px; /* Taille du texte */
+}
+
+/* Bouton burger menu (pour mobile) */
+.burger-menu {
+    width: 30px;
+    height: 25px;
+    cursor: pointer; /* Curseur pointeur */
+    display: none; /* Masqué sur grand écran, visible en mobile */
+    flex-direction: column; /* Colonnes pour les barres */
+    justify-content: space-between; /* Espacement entre les barres */
+    z-index: 1001; /* Sur le dessus */
+}
+.burger-menu .bar {
+    height: 3px; /* Hauteur des barres */
+    background-color: #fff; /* Couleur blanc ou selon thème */
+    border-radius: 2px; /* Coins arrondis */
+    width: 100%; /* Prend toute la largeur du burger */
+    transition: 0.3s; /* Transition pour effet */
+}
+
+/* Style pour l'icône d'impression */
+.print-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: #C0C0C0.; /* Couleur argent */
+  z-index: 10;
+  transition: color 0.3s;
+}
+.print-icon:hover {
+  color: #D3D3D3; /* gris clair au hover */
+}
+
+.texte-centré {
+  display: block;
+  text-align: center;
+}
+
+/* ------------------------------------------- FIN DES STYLES GLOBAUX ------------------------------------------- */
+
+/* =========================== STYLES RESPONSIVE (pour mobiles et petits écrans) =========================== */
+
+/* Responsive pour petits écrans (max 600px) */
+@media (max-width: 600px) {
+    /* Réduction du padding dans le conteneur contact */
+    .contact-container {
+        padding: 20px;
+    }
+}
+
+/* Responsive pour écrans jusqu'à 768px */
+@media(max-width: 768px) {
+	html, body {
+    overflow-x: hidden;
+}	
+    /* La section livres devient colonne (verticale) */
+    .recette {
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Les cartes des recettes s'adaptent en largeur */
+    .card {
+        width: 90%;
+    }
+    
+    /* Padding pour intro */
+    .intro {
+        padding: 0 20px; /* 0 en haut et en bas, 20px à gauche et à droite */
+        box-sizing: border-box; /* Inclure paddings dans la largeur */
+    }
+    /* Taille du titre dans intro réduit pour mobile */
+    .intro h1 {
+        font-size: 2rem;
+    }
+    /* Affichage du burger menu en mobile */
+    .burger-menu {
+        display: flex !important; /* S'assurer qu'il s'affiche */
+        position: fixed; /* Toujours en haut à droite */
+        top: 15px;
+        right: 20px;
+        width: 35px;
+        height: 30px;
+        flex-direction: column;
+        justify-content: space-around; /* Espacement entre barres */
+        align-items: center;
+        cursor: pointer;
+        z-index: 9999; /* Très élevé pour être au-dessus */
+        background: transparent; /* Pas de fond */
+    }
+    /* Structure des barres du burger */
+    .burger-menu .bar {
+        height: 4px; /* Plus épaisses */
+        width: 100%;
+        background-color: #fff; /* Blanc */
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+    /* Menu déroulant en mobile */
+    .menu-drawer {
+        position: absolute; /* Position absolue */
+        top: calc(100% + 20px); /* Juste en dessous du burger */
+        right: 20px; /* Aligné à droite */
+        width: 250px; /* Largeur du menu */
+        background-color: #5E3200; /* Fond chocolat) */
+        box-shadow: 0 2px 8px rgba(0,0,0,0.5); /* Ombre */
+        display: none; /* Caché par défaut */
+        border-radius: 4px; /* Coins arrondis */
+        z-index: 1002; /* Sur le burger et autres éléments */
+    }
+    /* Menu actif en mobile */
+    .menu-drawer.active {
+        display: block; /* Afficher quand actif */
+    }
+    /* Adaptation du menu principal pour mobile */
+    .netflix-menu .menu {
+        list-style: none;
+        padding: 0 20px;
+        margin: 0;
+    }
+    /* Liens dans le menu mobile */
+    .netflix-menu .menu li {
+        margin: 20px 0;
+    }
+    /* Liens dans le menu mobile */
+    .netflix-menu .menu li a {
+        color: #fff;
+        font-size: 1.2em;
+        text-decoration: none;
+    }
+    /* Position fixe du burger */
+    #burger {
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        display: flex !important; /* S'assurer qu'il s'affiche */
+    }
+    /* Menu déroulant mobile */
+    .menu {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+		background-color: #5E3200; /* Fond chocolat) */
+		border-radius: 4px;
+    }
+    /* Espacement entre liens dans menu mobile */
+    .menu li {
+        margin: 20px 0;
+    }
+    /* Sous-menu dans mobile si nécessaire */
+    ul.submenu {
+        position: absolute;
+        top: 0; /* Positionné par rapport à son parent */
+        right: 60px; /* Ajusté selon besoin */
+        width: 200px;
+        background-color: #5E3200; /* Fond chocolat) */
+        box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        display: none; /* Peut être modifié pour toujours visible si souhaité */
+        z-index: 1002;
+        color: #fff; /* Couleur du texte */
+    }
+    /* Cacher le menu principal dans le header en mobile */
+    .menu-container {
+        display: none;
+    }
+    /* Afficher le burger menu en mobile */
+    .burger-menu {
+        display: flex !important; /* Toujours visible en mobile */
+        position: fixed; /* Fixé en haut à droite */
+        top: 15px;
+        right: 20px;
+        width: 35px;
+        height: 30px;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        cursor: pointer;
+        z-index: 9999;
+        background: transparent;
+    }
+    /* Barres du burger plus épaisses */
+    .burger-menu .bar {
+        height: 4px; /* Épaissies */
+        width: 100%;
+        background-color: #fff;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+    /* Menu déroulant en dehors, positionné */
+    .menu-drawer {
+        position: absolute; /* En dehors du flux normal */
+        top: calc(100% + 20px);
+        right: 20px;
+        width: 250px;
+        background-color: #8B5E3C;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        display: none; /* Caché par défaut */
+        border-radius: 4px;
+        z-index: 1002;
+    }
+    /* Menu actif en mobile */
+    .menu-drawer.active {
+        display: block; /* Visible quand actif */
+    }
+    /* Bandeau en mobile peut avoir une hauteur spécifique */
+    .bandeau {
+        height: 40px;
+        line-height: 40px;
+        display: flex;
+        align-items: center;
+    }
+	header {
+    display: flex;
+    flex-direction: column; /* pour empiler verticalement si besoin */
+    align-items: center; /* pour centrer horizontalement */
+    justify-content: center; /* pour centrer verticalement si nécessaire */
+    margin-top: 0; /* supprimer ou ajuster si besoin */
+    padding: 0px; /* éventuellement ajouter padding */
+    text-align: center; /* centrer le texte */
+	margin-top: 0;
+    margin-bottom: 0;
+  }
+
+    header img {
+    max-width: 670px;        
+    height: auto;           /* Maintient les proportions originales */
+    display: block;         /* Évite les espaces en ligne */
+    object-fit: contain;    /* Optionnel : pour s'assurer que l'image reste complète dans le conteneur sans déformation */
+    max-height: 100%;       /* Pour limiter la hauteur si nécessaire */	
+	margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Conteneur du formulaire de contact */
+.contact-container {
+    background-color: #5E3200; /* Fond chocolat) */
+    color: #D4AF37; /* Doré */
+    padding: 40px; /* Padding interne */
+    border-radius: 10px; /* Coins arrondis */
+    max-width: 370px; /* Largeur maximale */
+    width: 100%; /* Prend toute la largeur disponible */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Ombre légère */
+    margin: auto; /* Centrage horizontal et vertical */
+    margin-top: 120px; /* Espace au-dessus */
+}
+
+textarea {
+    font-size: 1.4em; /* Plus gros pour mobile, pour faciliter la lecture et la saisie */
+    height: 180px; /* Ajustement de la hauteur pour mobile */
+}	
+}

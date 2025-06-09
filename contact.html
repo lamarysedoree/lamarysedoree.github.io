@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, follow" />
+    <title>La maryse dorée - Contact</title>
+	<meta name="keywords" content="Daniel Iglésias, blog littéraire, romans policiers français, Overdose d’amour, Expérience, Enseigner en enseignant, à la mémoire du crime, folie de vivre" />
+    
+    <!-- Métadonnées de base -->
+    <meta name="description" content="Découvrez l'univers de Daniel Iglesias : polars percutants, mystères sombres, âmes torturées. Plongez dans Overdose d'amour, Enseigner en saignant, À la mémoire du crime, et bien plus." />
+    <meta name="author" content="Daniel Iglésias" />
+    <meta name="language" content="fr" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Comité plume doréé" />
+    <meta property="og:description" content="Découvrez l'univers de Daniel Iglesias : polars percutants, mystères sombres, âmes torturées. Plongez dans Overdose d'amour, Enseigner en saignant, À la mémoire du crime, et bien plus." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://daniglesias-bloglitteraire.github.io" />
+    <meta property="og:image" content="images/og-image.jpg" /> 
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Daniglesias-blog litteraire" />
+    <meta name="twitter:description" content="Découvrez l'univers de Daniel Iglesias : polars percutants, mystères sombres, âmes torturées. Plongez dans Overdose d'amour, Enseigner en saignant, À la mémoire du crime, et bien plus." />
+    <meta name="twitter:image" content="images/og-image.jpg" /> 
+
+    <link rel="icon" href="favicon1.ico" type="image/x-icon" />
+    <!-- Lien vers le fichier CSS externe -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Bandeau fixe en haut -->
+    <div class="bandeau">
+	    <!-- Bouton burger -->
+  <div class="burger-menu" id="burger" aria-label="Menu" role="button" tabindex="0">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+        <nav>
+            <!-- Menu -->
+  <div class="menu-drawer" id="menuDrawer">
+    <ul class="menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li>
+        <a href="conseils.html">Conseils</a>
+      </li>
+      <li>
+        <a href="#">Services</a>
+        <ul class="submenu">
+		  <li><a href="offrir_une_histoire.html">Offrir une histoire</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+        </nav>
+    </div>
+
+    <div class="contact-container">
+        <h2>Contactez-nous</h2>
+        <!-- Formulaire de contact -->
+        <form
+  action="https://formspree.io/f/movwewdv"
+  method="POST"
+>
+  <label>
+    Votre email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Votre message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Envoyer</button>
+</form>
+    </div>
+
+    <footer id="footer">
+        <p>&copy; 2025 comiteplumedoree.ddns.net<br> Tous droits réservés. Design et contenu crée par<br><i> le Comité Plume dorée.</i></p>
+        <!-- Boutons sociaux -->
+<div class="social-buttons">
+    <!-- Facebook -->
+    <div class="social-btn facebook">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flamarysedoree.github.io" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+    </div>
+    <!-- Twitter -->
+    <div class="social-btn twitter">
+        <a href="https://twitter.com/intent/tweet?text=Découvrez%20ce%20site%20fantastique%20https%3A%2F%2Flamarysedoree.github.io" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i> Twitter
+        </a>
+    </div>
+</div>
+    </footer>
+	<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const burger = document.getElementById('burger');
+  const menuDrawer = document.getElementById('menuDrawer');
+
+  burger.addEventListener('click', () => {
+    menuDrawer.classList.toggle('active');
+  });
+
+  // Fermer si clic en dehors
+  document.addEventListener('click', (e) => {
+    if (!menuDrawer.contains(e.target) && !burger.contains(e.target)) {
+      menuDrawer.classList.remove('active');
+    }
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+@media print {
+  /* Cacher les éléments non essentiels lors de l'impression */
+  header,
+  footer,
+  .print-icon,
+  .image-doree {
+    display: none !important;
+  }
+
+  /* Style spécifique pour la section unique de recette */
+  .recette-unique .recette-card {
+    color: #000; /* Couleur noire pour une meilleure lisibilité */
+    font-size: 28px; /* Taille de police claire et lisible */
+    border: none !important; /* Supprimer les bordures pour un look épuré */
+    box-shadow: none !important; /* Supprimer les ombres pour un rendu plus propre */
+    margin: 0; /* Éliminer les marges indésirables */
+    padding: 10mm; /* Ajouter un peu d'espace intérieur pour le confort de lecture */
+    text-align: justify; /* Justifier le texte */
+  }
+
+  /* Gestion de la mise en page pour la zone de contenu */
+  .content {
+    margin-top: 20mm !important; /* Marge supérieure pour espacer du haut de la page */
+    /* Éviter le saut de page avant cette section sauf si nécessaire */
+    page-break-before: avoid; 
+    text-align: justify; /* Justifier le texte dans la zone de contenu */
+  }
+
+  /* Améliorer la lisibilité générale */
+  body {
+    font-family: Georgia, serif; /* Police élégante pour impression */
+    line-height: 1.5; /* Espacement pour une lecture aisée */
+    color: #000; /* Couleur du texte en noir pour la clarté */
+    background: none; /* Supprimer tout fond coloré ou image */
+    margin: 0; /* Éliminer les marges par défaut */
+    padding: 0;
+    text-align: justify; /* Justifier le texte dans le corps du document */
+  }
+
+  /* Supprimer tous les éléments interactifs ou inutiles */
+  a {
+    text-decoration: none; /* Enlever soulignement des liens */
+    color: #000; /* Assurer la lisibilité des liens si présents */	
+  }
+  .espace {
+    height: 120px; /* espace supplémentaire */
+    display: block;
+  }
+}
+
+
+

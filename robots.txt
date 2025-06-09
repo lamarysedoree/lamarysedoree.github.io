@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /contact.html
+Disallow: /styles.css
+Disallow: /fonts/
+Allow: /index.html
+Allow: /bavarois.html
+Allow: /images/
