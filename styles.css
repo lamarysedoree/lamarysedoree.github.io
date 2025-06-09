@@ -210,28 +210,29 @@ ul.submenu li a:hover {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 10px; /* réduit de 20px à 10px */
   background-color: #FFFFE7;
-  text-align: left; /* Alignement du texte à gauche */
-  box-sizing: border-box; /* Pour inclure padding dans la largeur */
+  text-align: left;
+  box-sizing: border-box;
+  margin: 0 auto; /* pour centrer si besoin */
 }
 
 .recette-unique .recette-card {
-  background: #5E3200; /* Fond chocolat */
+  background: #5E3200;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-  border: 2px solid #FFD700; /* Bordure dorée de 2px */
-  width: 100%; /* Utiliser 100% pour s'adapter sur mobile */
-  max-width: 800px; /* Limite la largeur sur grands écrans */
-  padding: 30px;
+  border: 2px solid #FFD700;
+  width: 100%; /* pour s'adapter sur mobile ou réduire la largeur */
+  max-width: 800px;
+  padding: 15px; /* réduit de 30px à 15px */
+  margin: 10px; /* ajoute une marge externe pour espacement entre cartes */
   color: #FFF8DC;
   font-family: 'Georgia', serif;
   font-size: 1.2em;
   position: relative;
   transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-  box-sizing: border-box; /* Inclure padding et border dans la largeur */
-  margin: 0 auto; /* Centrer la carte horizontalement */
-  text-align: left; /* Texte aligné à gauche */
+  box-sizing: border-box;
+  text-align: left;
 }
 
 /* Effet hover */
@@ -576,7 +577,7 @@ p.quote {
     }
     /* Les cartes des recettes s'adaptent en largeur */
     .card {
-        width: 90%;
+        width: 100%;
     }
     
     /* Padding pour intro */
@@ -738,7 +739,7 @@ p.quote {
   }
 
     header img {
-    max-width: 500px;        
+    max-width: 400px;        
     height: auto;           /* Maintient les proportions originales */
     display: block;         /* Évite les espaces en ligne */
     object-fit: contain;    /* Optionnel : pour s'assurer que l'image reste complète dans le conteneur sans déformation */
@@ -763,5 +764,16 @@ p.quote {
 textarea {
     font-size: 1.4em; /* Plus gros pour mobile, pour faciliter la lecture et la saisie */
     height: 180px; /* Ajustement de la hauteur pour mobile */
+    justify-content: center;
+  }
+  .recette-unique {
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+  }
+  .recette-unique .recette-card {
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
 }	
 }
