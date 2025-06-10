@@ -166,8 +166,7 @@ ul.submenu li a:hover {
     display: flex; /* Flexbox */
     flex-wrap: wrap; /* Permet de passer à la ligne */
     gap: 20px; /* Espacement entre cartes */
-    justify-content: center; /* Centrer horizontalement */	
-	flex-wrap: wrap; /* permet aux cartes de passer à la ligne si nécessaire */
+    justify-content: center; /* Centrer horizontalement */
 }
 
 /* Carte d'un livre */
@@ -175,24 +174,19 @@ ul.submenu li a:hover {
     background-color: #5E3200; /* chocolat */
     border-radius: 8px; /* Coins arrondis */
     box-shadow: 0 4px 12px rgba(0,0,0,0.7); /* Ombre pour effet 3D */
+    width: 320px; /* Largeur fixe */
     display: flex; /* Flexbox pour aligner contenu vertical */
-	flex: 1 1 300px; /* croissance, réduction, base : minimum 300px */
     flex-direction: column; /* Disposition verticale */
     align-items: center; /* Centrer horizontalement */
     padding: 15px; /* Padding intérieur */
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Transitions pour effets au survol */	
-	width: 80%; /* largeur */
-	max-width: 45%; /* limite la largeur à 45% pour ne pas prendre toute la ligne */
-	margin: 10px auto; /* centre la carte horizontalement */
-    box-sizing: border-box; /* inclure padding/border dans la largeur */
-	padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Transitions pour effets au survol */
 }
 
 /* Effet au survol de la carte */
 .card:hover {
     transform: translateY(-5px); /* Légère élévation */
     box-shadow: 0 8px 20px rgba(0,0,0,0.9); /* Ombre plus accentuée */
-    background-color: #A56F4A; /* Nuance plus claire au survol - marron clair*/
+    background-color: #A56F4A; /* Nuance plus claire au survol */
 }
 
 /* Description de la recette */
@@ -530,7 +524,7 @@ p.quote {
   right: 10px;
   cursor: pointer;
   font-size: 1.5em;
-  color: #C0C0C0; /* Couleur argent */
+  color: #C0C0C0.; /* Couleur argent */
   z-index: 10;
   transition: color 0.3s;
 }
@@ -545,7 +539,7 @@ p.quote {
 
 /* Ajoutez cette règle à la fin de votre fichier styles.css */
 .btn-recette {
-  background-color: #DEA62B; /* couleur dorée */
+  background-color: #DEA62B;; /* couleur dorée */
   color: #fff;
   padding: 12px 24px;
   font-size: 1.2em;
@@ -567,34 +561,15 @@ p.quote {
 @media (max-width: 600px) {
     /* Réduction du padding dans le conteneur contact */
     .contact-container {
-        padding: 20px;		
+        padding: 20px;
     }
-  .card {
-	width: 90%; /* occupe 90% de la largeur de l'écran */
-    max-width: 95%; /* limite la largeur maximale à 95% pour éviter le débordement */
-  }
-}
-
-/* Pour les écrans moyens (par exemple, entre 601px et 1024px) */
-@media(min-width: 769px) {
-  nav .menu {
-    display: flex !important; /* ou block selon votre layout */
-  }
-}
-
-@media (max-width: 1024px) and (min-width: 601px) {
-  .recette {
-    padding: 0 20px; /* Espace horizontal intérieur */
-  }
-  .card {
-    max-width: 30%;
-    margin: 10px; /* Marges pour espacement entre cartes */
-  }
 }
 
 /* Responsive pour écrans jusqu'à 768px */
 @media(max-width: 768px) {
-
+	html, body {
+    overflow-x: hidden;
+}	
     /* La section livres devient colonne (verticale) */
     .recette {
         flex-direction: column;
@@ -602,10 +577,7 @@ p.quote {
     }
     /* Les cartes des recettes s'adaptent en largeur */
     .card {
-    margin: 10px auto;
-	width: 90%; /* occupe 90% de la largeur de l'écran */
-    max-width: 95%; /* limite la largeur maximale à 95% pour éviter le débordement */
-  }
+        width: 100%;
     }
     
     /* Padding pour intro */
@@ -800,8 +772,14 @@ textarea {
     padding: 5px;
   }
   .recette-unique .recette-card {
-    width: 80%;
+    width: 100%;
     max-width: 600px;
     margin: 10px auto;
 }	
+}
+@media (min-width: 769px) {
+  .netflix-menu .menu {
+    display: flex !important;
+    flex-direction: row;
+  }
 }
