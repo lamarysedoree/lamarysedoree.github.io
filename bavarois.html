@@ -35,38 +35,7 @@
     <link rel="stylesheet" href="styles.css" />
 	<link rel="stylesheet" href="print.css" media="print">
 </head>
-<body>
-    <!-- Bandeau fixe en haut -->
-    <div class="bandeau">
-	    <!-- Bouton burger -->
-  <div class="burger-menu" id="burger" aria-label="Menu" role="button" tabindex="0">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
-        <nav>
-            <!-- Menu -->
-  <div class="menu-drawer" id="menuDrawer">
-    <ul class="menu">
-      <li><a href="index.html">Accueil</a></li>
-      <li>
-        <a href="#">Pâtisserie</a>
-		<ul class="submenu">
-		  <li><a href="bavarois.html">Bavarois</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">Smoothies</a>
-        <ul class="submenu">
-		  <li><a href="">Smoothies à la fraise</a></li>
-        </ul>
-      </li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
-        </nav>
-    </div>
-
+<body>    
     <!-- Contenu principal -->
     <div class="content">
         <!-- Introduction -->
@@ -151,22 +120,7 @@
   window.print();
 }
     </script>
-	<script>
-  document.addEventListener('DOMContentLoaded', () => {
-  const burger = document.getElementById('burger');
-  const menuDrawer = document.getElementById('menuDrawer');
-
-  burger.addEventListener('click', () => {
-    menuDrawer.classList.toggle('active');
-  });
-
-  // Fermer si clic en dehors
-  document.addEventListener('click', (e) => {
-    if (!menuDrawer.contains(e.target) && !burger.contains(e.target)) {
-      menuDrawer.classList.remove('active');
-    }
-  });
-});
-</script>
+	     <div id="menu-container"></div>	<!-- Div qui sert de conteneur pour charger le menu -->
+         <script src="main.js"></script><!-- chargement du menu -->
 </body>
 </html>

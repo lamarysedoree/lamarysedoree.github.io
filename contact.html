@@ -30,35 +30,7 @@
     <!-- Lien vers le fichier CSS externe -->
     <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-    <!-- Bandeau fixe en haut -->
-    <div class="bandeau">
-	    <!-- Bouton burger -->
-  <div class="burger-menu" id="burger" aria-label="Menu" role="button" tabindex="0">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
-        <nav>
-            <!-- Menu -->
-  <div class="menu-drawer" id="menuDrawer">
-    <ul class="menu">
-      <li><a href="index.html">Accueil</a></li>
-      <li>
-        <a href="conseils.html">Conseils</a>
-      </li>
-      <li>
-        <a href="#">Services</a>
-        <ul class="submenu">
-		  <li><a href="offrir_une_histoire.html">Offrir une histoire</a></li>
-        </ul>
-      </li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
-        </nav>
-    </div>
-
+<body>   
     <div class="contact-container">
         <h2>Contactez-nous</h2>
         <!-- Formulaire de contact -->
@@ -74,7 +46,7 @@
     Votre message:
     <textarea name="message"></textarea>
   </label>
-  <!-- your other form fields go here -->
+  <!-- Les autres champs de formulaires vont ici -->
   <button type="submit">Envoyer</button>
 </form>
     </div>
@@ -97,22 +69,7 @@
     </div>
 </div>
     </footer>
-	<script>
-  document.addEventListener('DOMContentLoaded', () => {
-  const burger = document.getElementById('burger');
-  const menuDrawer = document.getElementById('menuDrawer');
-
-  burger.addEventListener('click', () => {
-    menuDrawer.classList.toggle('active');
-  });
-
-  // Fermer si clic en dehors
-  document.addEventListener('click', (e) => {
-    if (!menuDrawer.contains(e.target) && !burger.contains(e.target)) {
-      menuDrawer.classList.remove('active');
-    }
-  });
-});
-</script>
+	     <div id="menu-container"></div>	<!-- Div qui sert de conteneur pour charger le menu -->
+         <script src="main.js"></script><!-- chargement du menu -->
 </body>
 </html>
