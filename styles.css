@@ -576,6 +576,12 @@ p.quote {
 }
 
 /* Pour les écrans moyens (par exemple, entre 601px et 1024px) */
+@media(min-width: 769px) {
+  nav .menu {
+    display: flex !important; /* ou block selon votre layout */
+  }
+}
+
 @media (max-width: 1024px) and (min-width: 601px) {
   .recette {
     padding: 0 20px; /* Espace horizontal intérieur */
