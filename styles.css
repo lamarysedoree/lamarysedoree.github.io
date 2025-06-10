@@ -561,8 +561,11 @@ p.quote {
 @media (max-width: 600px) {
     /* Réduction du padding dans le conteneur contact */
     .contact-container {
-        padding: 20px;
+        padding: 20px;		
     }
+  .card {
+    width: 95%;
+  }
 }
 
 /* Responsive pour écrans jusqu'à 768px */
@@ -577,7 +580,9 @@ p.quote {
     }
     /* Les cartes des recettes s'adaptent en largeur */
     .card {
-        width: 100%;
+    width: 90%; /* ou 100% selon préférence */
+    max-width: 100%;
+    margin: 10px auto;
     }
     
     /* Padding pour intro */
