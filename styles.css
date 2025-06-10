@@ -174,19 +174,21 @@ ul.submenu li a:hover {
     background-color: #5E3200; /* chocolat */
     border-radius: 8px; /* Coins arrondis */
     box-shadow: 0 4px 12px rgba(0,0,0,0.7); /* Ombre pour effet 3D */
-    width: 320px; /* Largeur fixe */
     display: flex; /* Flexbox pour aligner contenu vertical */
     flex-direction: column; /* Disposition verticale */
     align-items: center; /* Centrer horizontalement */
     padding: 15px; /* Padding intérieur */
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Transitions pour effets au survol */
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Transitions pour effets au survol */	
+	width: 80%; /* largeur */
+	max-width: 400px; /* limite la largeur maximale */
+	margin: 10px auto; /* centre la carte horizontalement */
 }
 
 /* Effet au survol de la carte */
 .card:hover {
     transform: translateY(-5px); /* Légère élévation */
     box-shadow: 0 8px 20px rgba(0,0,0,0.9); /* Ombre plus accentuée */
-    background-color: #A56F4A; /* Nuance plus claire au survol */
+    background-color: #A56F4A; /* Nuance plus claire au survol - marron clair*/
 }
 
 /* Description de la recette */
@@ -564,7 +566,8 @@ p.quote {
         padding: 20px;		
     }
   .card {
-    width: 95%;
+	width: 90%; /* occupe 90% de la largeur de l'écran */
+    max-width: 95%; /* limite la largeur maximale à 95% pour éviter le débordement *
   }
 }
 
