@@ -567,7 +567,7 @@ p.quote {
     }
   .card {
 	width: 90%; /* occupe 90% de la largeur de l'écran */
-    max-width: 95%; /* limite la largeur maximale à 95% pour éviter le débordement *
+    max-width: 95%; /* limite la largeur maximale à 95% pour éviter le débordement */
   }
 }
 
@@ -583,9 +583,10 @@ p.quote {
     }
     /* Les cartes des recettes s'adaptent en largeur */
     .card {
-    width: 90%; /* ou 100% selon préférence */
-    max-width: 100%;
     margin: 10px auto;
+	width: 90%; /* occupe 90% de la largeur de l'écran */
+    max-width: 95%; /* limite la largeur maximale à 95% pour éviter le débordement */
+  }
     }
     
     /* Padding pour intro */
