@@ -30,7 +30,37 @@
     <!-- Lien vers le fichier CSS externe -->
     <link rel="stylesheet" href="styles.css" />
 </head>
-<body>   
+<body>
+ <!-- menu.html -->
+<div class="bandeau">
+  <!-- Bouton burger -->
+  <div class="burger-menu" id="burger" aria-label="Menu" role="button" tabindex="0">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <nav>
+    <!-- Menu -->
+    <div class="menu-drawer" id="menuDrawer">
+      <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li>
+          <a href="#">Pâtisserie</a>
+          <ul class="submenu">
+            <li><a href="bavarois.html">Bavarois</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Smoothies</a>
+          <ul class="submenu">
+            <li><a href="">Smoothies à la fraise</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>  
     <div class="contact-container">
         <h2>Contactez-nous</h2>
         <!-- Formulaire de contact -->
@@ -69,7 +99,6 @@
     </div>
 </div>
     </footer>
-	     <div id="menu-container"></div>	<!-- Div qui sert de conteneur pour charger le menu -->
-         <script src="main.js"></script><!-- chargement du menu -->
+	             <script src="main.js"></script><!-- gestion du menu -->
 </body>
 </html>
