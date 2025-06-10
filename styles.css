@@ -166,7 +166,8 @@ ul.submenu li a:hover {
     display: flex; /* Flexbox */
     flex-wrap: wrap; /* Permet de passer à la ligne */
     gap: 20px; /* Espacement entre cartes */
-    justify-content: center; /* Centrer horizontalement */
+    justify-content: center; /* Centrer horizontalement */	
+	flex-wrap: wrap; /* permet aux cartes de passer à la ligne si nécessaire */
 }
 
 /* Carte d'un livre */
@@ -175,13 +176,16 @@ ul.submenu li a:hover {
     border-radius: 8px; /* Coins arrondis */
     box-shadow: 0 4px 12px rgba(0,0,0,0.7); /* Ombre pour effet 3D */
     display: flex; /* Flexbox pour aligner contenu vertical */
+	flex: 1 1 300px; /* croissance, réduction, base : minimum 300px */
     flex-direction: column; /* Disposition verticale */
     align-items: center; /* Centrer horizontalement */
     padding: 15px; /* Padding intérieur */
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Transitions pour effets au survol */	
 	width: 80%; /* largeur */
-	max-width: 400px; /* limite la largeur maximale */
+	max-width: 45%; /* limite la largeur à 45% pour ne pas prendre toute la ligne */
 	margin: 10px auto; /* centre la carte horizontalement */
+    box-sizing: border-box; /* inclure padding/border dans la largeur */
+	padding: 10px;
 }
 
 /* Effet au survol de la carte */
@@ -568,6 +572,17 @@ p.quote {
   .card {
 	width: 90%; /* occupe 90% de la largeur de l'écran */
     max-width: 95%; /* limite la largeur maximale à 95% pour éviter le débordement */
+  }
+}
+
+/* Pour les écrans moyens (par exemple, entre 601px et 1024px) */
+@media (max-width: 1024px) and (min-width: 601px) {
+  .recette {
+    padding: 0 20px; /* Espace horizontal intérieur */
+  }
+  .card {
+    max-width: 30%;
+    margin: 10px; /* Marges pour espacement entre cartes */
   }
 }
 
