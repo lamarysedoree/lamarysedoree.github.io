@@ -35,37 +35,7 @@
     <link rel="stylesheet" href="styles.css" />
 	<link rel="stylesheet" href="print.css" media="print">
 </head>
-<body> 
-<!-- menu.html -->
-<div class="bandeau">
-  <!-- Bouton burger -->
-  <div class="burger-menu" id="burger" aria-label="Menu" role="button" tabindex="0">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
-  <nav>
-    <!-- Menu -->
-    <div class="menu-drawer" id="menuDrawer">
-      <ul class="menu">
-        <li><a href="index.html">Accueil</a></li>
-        <li>
-          <a href="#">Pâtisserie</a>
-          <ul class="submenu">
-            <li><a href="bavarois.html">Bavarois</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Smoothies</a>
-          <ul class="submenu">
-            <li><a href="">Smoothies à la fraise</a></li>
-          </ul>
-        </li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-</div>  
+<body>  
     <!-- Contenu principal -->
     <div class="content">
         <!-- Introduction -->
@@ -150,21 +120,7 @@
   window.print();
 }
     </script>
-	     <script>
-    // Gestion du menu burger
-    const burger = document.getElementById('burger');
-    const menuDrawer = document.getElementById('menuDrawer');
-
-    if (burger && menuDrawer) {
-      burger.addEventListener('click', () => {
-        menuDrawer.classList.toggle('active');
-      });
-      document.addEventListener('click', (e) => {
-        if (!menuDrawer.contains(e.target) && !burger.contains(e.target)) {
-          menuDrawer.classList.remove('active');
-        }
-      });
-    }
-  </script>
+	     <div id="menu-container"></div><!-- Fait apparaître le menu -->
+         <script src="chemin/vers/main.js"></script><!-- Gère le menu -->
 </body>
 </html>
