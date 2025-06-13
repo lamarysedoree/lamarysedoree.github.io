@@ -1,10 +1,9 @@
-title: Mon Site
-description: Site statique avec commentaires
-baseurl: ""  # laisse vide si votre site est à la racine
-url: "https://lamarysedoree.github.io"
-
-# Configuration Staticman
-comments:
-  path: "_comments"            # Dossier où seront stockés les commentaires
-  branch: main                # La branche sur laquelle vous déployez
-  allowed_fields: ["name", "email", "message"]
+name: staticman
+version: 2
+allowedHosts:
+  - lamarysedoree.github.io
+repositories:
+  - name: "lamarysedoree/lamarysedoree.github.io"
+    branch: "main"
+    path: "comments"
+    filename: "comment-{{ date }}-{{ index }}.json"
