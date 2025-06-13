@@ -1,0 +1,9 @@
+# staticman.yml
+branch: main
+commitMessage: "Nouveau commentaire"
+path: "_comments"
+filename: "comments/{{date}}-{{slug}}.json"
+allowedFields:
+  - name
+  - email
+  - message
