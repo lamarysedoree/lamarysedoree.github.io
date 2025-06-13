@@ -1,9 +1,8 @@
-name: staticman
-version: 2
-allowedHosts:
-  - lamarysedoree.github.io
-repositories:
-  - name: "lamarysedoree/lamarysedoree.github.io"
-    branch: "main"
-    path: "comments"
-    filename: "comment-{{ date }}-{{ index }}.json"
+ 
+    plugins:
+  - jekyll-staticman
+
+staticman:
+  endpoint: "https://staticman3.web.app/v3/entry/github/lamarysedoree/lamarysedoree.github.io"
+
+    
