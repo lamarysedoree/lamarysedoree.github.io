@@ -1,9 +1,10 @@
-# _config.yml
+title: Mon Site
+description: Site statique avec commentaires
+baseurl: ""  # laisse vide si votre site est à la racine
+url: "https://lamarysedoree.github.io"
+
+# Configuration Staticman
 comments:
-  enabled: true
-  path: "_comments"
-  filename: comments.json  # ou laisser vide si vous voulez un fichier par commentaire
-  type: "json"
-acceptance:
-  comments:
-    enabled: true
+  path: "_comments"            # Dossier où seront stockés les commentaires
+  branch: main                # La branche sur laquelle vous déployez
+  allowed_fields: ["name", "email", "message"]
