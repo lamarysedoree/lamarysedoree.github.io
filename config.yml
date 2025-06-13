@@ -1,0 +1,9 @@
+# _config.yml
+comments:
+  enabled: true
+  path: "_comments"
+  filename: comments.json  # ou laisser vide si vous voulez un fichier par commentaire
+  type: "json"
+acceptance:
+  comments:
+    enabled: true
