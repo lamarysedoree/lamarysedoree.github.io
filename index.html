@@ -27,17 +27,18 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <!-- Lien vers le fichier CSS externe -->
     <link rel="stylesheet" href="styles.css" />
+    <!-- Ajout de la police Font Awesome pour les icônes sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
     <!-- Bandeau fixe en haut -->
     <div class="bandeau">
         <!-- Bouton burger -->
         <div class="burger-menu" id="burger" aria-label="Menu" role="button" tabindex="0">
-            <div class="bar"></div> <!-- Fin de .bar -->
-            <div class="bar"></div> <!-- Fin de .bar -->
-            <div class="bar"></div> <!-- Fin de .bar -->
-        </div> <!-- Fin de #burger -->
-
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <nav>
             <!-- Menu -->
             <div class="menu-drawer" id="menuDrawer">
@@ -48,20 +49,20 @@
                         <!-- sous-menu -->
                         <ul class="submenu">
                             <li><a href="recettes.html">Mes recettes</a></li>
-                        </ul> <!-- Fin de .submenu -->
-                    </li> <!-- Fin du li Pâtisserie -->
+                        </ul>
+                    </li>
                     <li>
                         <a href="#">Smoothies</a>
                         <!-- sous-menu -->
                         <ul class="submenu">
                             <li><a href="">Smoothies à la fraise</a></li>
-                        </ul> <!-- Fin de .submenu -->
-                    </li> <!-- Fin du li Smoothies -->
+                        </ul>
+                    </li>
                     <li><a href="contact.html">Contact</a></li>
-                </ul> <!-- Fin de ul.menu -->
-            </div> <!-- Fin de .menu-drawer -->
+                </ul>
+            </div>
         </nav>
-    </div> <!-- Fin de .bandeau -->
+    </div>
 
     <!-- Contenu principal -->
     <div class="content">
@@ -69,7 +70,7 @@
         <section class="intro">
             <header>
                 <img src="images/header.png" alt="Logo" style="height:400px;">
-            </header> <!-- Fin de header -->
+            </header>
             <h3>"La gourmandise est l'art d'utiliser la nourriture pour créer du bonheur."</h3>
             <p>
                 Je m'appelle Nathalie, mariée et maman de 4 enfants. Je suis passionnée de cuisine. J'ai décidé de partager les petits plats que j'aime.
@@ -79,62 +80,101 @@
                 Je puise mon inspiration dans les livres de grands chefs, dans les blogs, dans les magazines...
                 À vos fourneaux…
             </p>
-        </section> <!-- Fin de section.intro -->
-    </div> <!-- Fin de div.content (intro) -->
+        </section>
+    </div>
 
-    <!-- Contenu principal -->
+    <!-- Contenu principal avec les cartes alignées -->
+	<!-- Section pour cartes 1 à 3 -->
     <div class="content">
-        <!-- Section recettes -->
-        <section id="recette" class="recette">
+        <section id="cartesalignées" class="cartes-alignées">
             <!-- Carte 1 -->
             <div class="card" id="recette1">
                 <div class="description">
                     <div class="photo-card">
                         <a href="bavarois.html">
                             <img src="images/bavarois.jpg" alt="groupe" class="image-doree" />
-                        </a> <!-- Fin de a -->
-                        <h3 class="titre-blanc"><a href="bavarois.html">Bavarois</a></h3> <!-- Fin de a -->
-                        <!-- Après la section intro ou à l'endroit où vous souhaitez le bouton -->
+                        </a>
+                        <h3 class="titre-blanc"><a href="bavarois.html">Bavarois</a></h3>
                         <div style="text-align: center; margin: 30px 0;">
                             <a href="bavarois.html" class="btn-recette">Voir la recette</a>
-                        </div> <!-- Fin de div style -->
-                    </div> <!-- Fin de .photo-card -->
-                </div> <!-- Fin de .description -->
-            </div> <!-- Fin de .card #recette1 -->
-
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- Carte 2 -->
             <div class="card" id="recette2">
                 <div class="description">
                     <div class="photo-card">
                         <a href="buche_chocolat.html">
                             <img src="images/buche_chocolat.jpg" alt="écriture" class="image-doree" />
-                        </a> <!-- Fin de a -->
-                        <h3 class="titre-blanc"><a href="buche_au_chocolat.html">Bûche au chocolat</a></h3> <!-- Fin de a -->
-                        <!-- Après la section intro ou à l'endroit où vous souhaitez le bouton -->
+                        </a>
+                        <h3 class="titre-blanc"><a href="buche_au_chocolat.html">Bûche au chocolat</a></h3>
                         <div style="text-align: center; margin: 30px 0;">
                             <a href="buche_au_chocolat.html" class="btn-recette">Voir la recette</a>
-                        </div> <!-- Fin de div style -->
-                    </div> <!-- Fin de .photo-card -->
-                </div> <!-- Fin de .description -->
-            </div> <!-- Fin de .card #recette2 -->
-
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- Carte 3 -->
             <div class="card" id="recette3">
                 <div class="description">
                     <div class="photo-card">
                         <a href="pavlova.html">
                             <img src="images/pavlova.jpeg" alt="écriture" class="image-doree" />
-                        </a> <!-- Fin de a -->
-                        <h3 class="titre-blanc"><a href="pavlova.html">Pavlova</a></h3> <!-- Fin de a -->
-                        <!-- Après la section intro ou à l'endroit où vous souhaitez le bouton -->
+                        </a>
+                        <h3 class="titre-blanc"><a href="pavlova.html">Pavlova</a></h3>
                         <div style="text-align: center; margin: 30px 0;">
                             <a href="pavlova.html" class="btn-recette">Voir la recette</a>
-                        </div> <!-- Fin de div style -->
-                    </div> <!-- Fin de .photo-card -->
-                </div> <!-- Fin de .description -->
-            </div> <!-- Fin de .card #recette3 -->
-        </section> <!-- Fin de section#recette -->
-    </div> <!-- Fin de div.content (second) -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</section>
+		<section id="cartesalignées" class="cartes-alignées">
+            <!-- Carte 4 -->
+            <div class="card" id="recette4">
+                <div class="description">
+                    <div class="photo-card">
+                        <a href="bavarois.html">
+                            <img src="images/bavarois.jpg" alt="groupe" class="image-doree" />
+                        </a>
+                        <h3 class="titre-blanc"><a href="bavarois.html">Bavarois</a></h3>
+                        <div style="text-align: center; margin: 30px 0;">
+                            <a href="bavarois.html" class="btn-recette">Voir la recette</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Carte 5 -->
+            <div class="card" id="recette5">
+                <div class="description">
+                    <div class="photo-card">
+                        <a href="buche_chocolat.html">
+                            <img src="images/buche_chocolat.jpg" alt="écriture" class="image-doree" />
+                        </a>
+                        <h3 class="titre-blanc"><a href="buche_au_chocolat.html">Bûche au chocolat</a></h3>
+                        <div style="text-align: center; margin: 30px 0;">
+                            <a href="buche_au_chocolat.html" class="btn-recette">Voir la recette</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Carte 6 -->
+            <div class="card" id="recette6">
+                <div class="description">
+                    <div class="photo-card">
+                        <a href="pavlova.html">
+                            <img src="images/pavlova.jpeg" alt="écriture" class="image-doree" />
+                        </a>
+                        <h3 class="titre-blanc"><a href="pavlova.html">Pavlova</a></h3>
+                        <div style="text-align: center; margin: 30px 0;">
+                            <a href="pavlova.html" class="btn-recette">Voir la recette</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <!-- Pied de page -->
     <footer id="footer">
@@ -146,15 +186,15 @@
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flamarysedoree.github.io" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-facebook-f"></i> Facebook
                 </a>
-            </div> <!-- Fin de .social-btn facebook -->
+            </div>
             <!-- Twitter -->
             <div class="social-btn twitter">
                 <a href="https://twitter.com/intent/tweet?text=Découvrez%20ce%20site%20fantastique%20https%3A%2F%2Flamarysedoree.github.io" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-twitter"></i> Twitter
                 </a>
-            </div> <!-- Fin de .social-btn twitter -->
-        </div> <!-- Fin de .social-buttons -->
-    </footer> <!-- Fin de footer#footer -->
+            </div>
+        </div>
+    </footer>
 
     <!-- Script burger menu -->
     <script>

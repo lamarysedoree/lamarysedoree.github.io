@@ -161,25 +161,40 @@ ul.submenu li a:hover {
     color: black; /* Noir */
 }
 
-/* Section recettes, affichage flex pour mise en page en grille */
+/* Section recettes (grille) avec marges équilibrées */
 .recette {
-    display: flex; /* Flexbox */
-    flex-wrap: wrap; /* Permet de passer à la ligne */
-    gap: 20px; /* Espacement entre cartes */
-    justify-content: center; /* Centrer horizontalement */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px; /* Limite de la largeur totale */
+    margin: 0 auto; /* Centrage horizontal */
 }
 
-/* Carte d'un livre */
+
+/* Cartes de index.html*/
 .card {
-    background-color: #5E3200; /* chocolat */
-    border-radius: 8px; /* Coins arrondis */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.7); /* Ombre pour effet 3D */
-    width: 320px; /* Largeur fixe */
-    display: flex; /* Flexbox pour aligner contenu vertical */
-    flex-direction: column; /* Disposition verticale */
-    align-items: center; /* Centrer horizontalement */
-    padding: 15px; /* Padding intérieur */
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Transitions pour effets au survol */
+    background-color: #5E3200;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+    padding: 15px;
+    width: 100%;
+    max-width: 30%;
+	margin: 0;
+	flex: 1 1 30%;
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;	
+}
+
+/* Section cartes de index.html alignées */
+.cartes-alignées {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Centrer les cartes */
+    margin-top: 20px;
+}
+
 }
 
 /* Effet au survol de la carte */
@@ -606,6 +621,17 @@ p.quote {
     .contact-container {
         padding: 20px;
     }
+	.recette {
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+	max-width: 100%;
+    margin: 0 auto;
+  }
 }
 
 /* Responsive pour écrans jusqu'à 768px */
@@ -617,10 +643,15 @@ p.quote {
     .recette {
         flex-direction: column;
         align-items: center;
+		padding: 0 20px;
+        box-sizing: border-box;
     }
     /* Les cartes des recettes s'adaptent en largeur */
     .card {
-        width: 100%;
+    flex: 1 1 100%;
+    max-width: 100%;
+	margin-left: 20px;
+    margin-right: 20px
     }
     
     /* Padding pour intro */
