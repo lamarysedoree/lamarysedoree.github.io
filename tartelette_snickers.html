@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La maryse dorée - Bavarois</title>
+    <meta name="keywords" content="maryse dorée, pâtisserie, recettes pâtisseries, gâteaux, smoothie,bavarois,pavlova, fraisier" />
+    
+    <!-- Métadonnées de base -->
+    <meta name="description" content="La Maryse Dorée: votre blog pour réussir desserts gourmands, astuces et recettes  pour amateurs et pros (bavarois, Pavlova, Forêt noire, Panacotta, fraisiers, choux à la crème…)." />
+    <meta name="author" content="La maryse dorée" />
+    <meta name="language" content="fr" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="La maryse dorée" />
+    <meta property="og:description" content="La Maryse Dorée: votre blog pour réussir desserts gourmands, astuces et recettes  pour amateurs et pros (bavarois, Pavlova, Forêt noire, Panacotta, fraisiers, choux à la crème…)." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lamarysedoree.github.io" />
+    <meta property="og:image" content="images/og-image.png" /> 
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="La maryse dorée" />
+    <meta name="twitter:description" content="La Maryse Dorée: votre blog pour réussir desserts gourmands, astuces et recettes  pour amateurs et pros (bavarois, Pavlova, Forêt noire, Panacotta, fraisiers, choux à la crème…)." />
+    <meta name="twitter:image" content="images/og-image.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Font Awesome pour icônes sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Fichier CSS externe -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="print.css" media="print">
+</head>
+<body>
+    <!-- Bandeau fixe en haut -->
+    <div class="bandeau">
+        <!-- Bouton burger -->
+        <div class="burger-menu" id="burger" aria-label="Menu" role="button" tabindex="0">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+            <!-- Menu -->
+            <div class="menu-drawer" id="menuDrawer">
+                <ul class="menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li>
+                        <a href="#">Pâtisserie</a>               		
+                        <ul class="submenu">
+                            <li><a href="recettes.html">Mes recettes</a></li>
+                        </ul>				
+                    </li>
+                    <li>
+                        <a href="#">Smoothies</a>
+                        <ul class="submenu">
+                            <li><a href="">Smoothies à la fraise</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div> <!-- fin menu-drawer -->
+        </nav>
+    </div> <!-- fin bandeau -->
+
+    <!-- Contenu principal -->
+    <div class="content">
+        <!-- Introduction -->
+        <section class="intro">
+            <header>
+                <img src="images/header.png" alt="Logo" style="height:400px;">
+            </header> <!-- fin header -->
+            <div class="content h2">
+                <h2>Bavarois</h2><br>
+            </div> <!-- fin div.content.h2 -->
+        
+            <!-- Section recette -->
+            <section id="recette" class="recette recette-unique">
+                <div class="recette-card" id="recette1">
+                    <div class="print-icon" onclick="imprimerRecette()" title="Imprimer cette recette">
+                        <i class="fas fa-print"></i>
+                    </div> <!-- fin print-icon -->
+
+                    <!-- contenu de la recette -->
+                    <img src="images/bavarois.jpg" alt="groupe" class="image-doree" />
+
+                    <span class="texte-centré">
+                        Temps de préparation: 1h<br>
+                        Temps de cuisson: 15 minutes<br>
+                        Difficulté: Moyenne<br>
+                        Ingrédients (8 personnes):
+                    </span>
+
+                    <!-- Ingrédients génoise -->
+                    <ul>
+                        <u>- Pour la génoise:</u><br>
+                        <li>2 Œufs</li>
+                        <li>75G de sucre</li>
+                        <li>70G de farine</li>
+                        <li>4Cl de lait</li>
+                    </ul>
+
+                    <!-- Ingrédients mousse à la fraise -->
+                    <ul>
+                        <u>- Pour la mousse à la fraise:</u>
+                        <li>500G de fraises</li>
+                        <li>80G de sucre</li>
+                        <li>5 Feuilles de gélatine</li>
+                        <li>40Cl de crème fluide entière</li>
+                        <li>50G de sucre glace</li>
+                    </ul>
+
+                    <!-- Ingrédients miroir -->
+                    <ul>
+                        <u>- Pour le miroir:</u>
+                        <li>250G de fraises</li>
+                        <li>50G de sucre</li>
+                        <li>2 Feuilles de gélatine</li>
+                    </ul>
+                    <br>
+
+                    <div class="espace"></div> <!-- espace pour impression -->
+
+                    <!-- Préparation -->
+                    <span class="texte-centré"><b><i>Préparation:</i></b></span><br>
+                    <ol>
+                        <li>Préparez la génoise. Séparez les blancs des jaunes d’œuf. Ajoutez le sucre, la farine et le lait aux jaunes.</li>
+                        <li>Montez les blancs en neige et incorporez-les délicatement à la préparation précédente.</li>
+                        <li>Versez la pâte dans un moule beurré et faites cuire 12 minutes à 200° sans préchauffer le four.</li>
+                        <li>Placez la génoise sur un plat de service avec un cercle pâtissier autour.</li>
+                        <li>Préparez la mousse à la fraise. Équeutez et laver les fraises. Mixez les avec le sucre en poudre.</li>
+                        <li>Faites ramollir la gélatine dans un bol d'eau froide.</li>
+                        <li>Pendant ce temps, mettez la purée de fraises obtenue à chauffer dans une casserole.</li>
+                        <!-- Gélatine dissoute -->
+                        <li>Une fois la gélatine bien molle, faites la dissoudre dans la purée de fraises. Laissez tiédir.</li>
+                        <li>Battez au fouet électrique la crème fluide et le sucre glace.</li>
+                        <li>Ajoutez délicatement les fraises à la chantilly et mélangez bien.</li>
+                        <li>Versez la mousse à la fraise sur la génoise et réservez au moins 2 heures au frigo avant de poursuivre.</li>
+                        <li>Préparez le miroir. Équeutez et lavez les fraises. Mixez les avec le sucre.</li>
+                        <div class="espace"></div> <!-- autre espace pour impression -->
+                        <li>Faites ramollir la gélatine dans un bol d'eau froide.</li>
+                        <li>Pendant ce temps, mettez la purée de fraises à chauffer dans une casserole.</li>
+                        <!-- Gélatine dissoute pour le miroir -->
+                        <li>Une fois la gélatine bien molle, la faire dissoudre dans la purée de fruits. Laissez tiédir.</li>
+                        <li>Versez le miroir sur la mousse à la fraise et réservez au moins 4 heures au frigo avant de démouler.</li>
+                        <li>Pour démouler, passer un couteau lisse tout autour du cercle pour décoller la mousse et lever doucement.</li>
+                        <li>Décorez avec quelques fraises supplémentaires.</li>
+                    </ol>
+                </div> <!-- fin recette-card -->
+            </section> <!-- fin section recette -->
+        </section> <!-- fin section intro -->
+    </div> <!-- fin div.content -->
+
+    <!-- Pied de page -->
+    <footer id="footer">
+        <p>&copy; 2025 lamarysedoree.guithub.io<br>Tous droits réservés. Design et contenu crée par<br><i>Eric et Nathalie</i></p>
+        <!-- Boutons sociaux -->
+        <div class="social-buttons">
+            <!-- Facebook -->
+            <div class="social-btn facebook">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flamarysedoree.github.io" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+            </div> <!-- fin social-btn facebook -->
+            <!-- Twitter -->
+            <div class="social-btn twitter">
+                <a href="https://twitter.com/intent/tweet?text=Découvrez%20ce%20site%20fantastique%20https%3A%2F%2Flamarysedoree.github.io" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+            </div> <!-- fin social-btn twitter -->
+        </div> <!-- fin social-buttons -->
+    </footer> <!-- fin footer -->
+
+    <!-- Scripts -->
+    <script>
+        function imprimerRecette() {
+            window.print();
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const burger = document.getElementById('burger');
+            const menuDrawer = document.getElementById('menuDrawer');
+
+            burger.addEventListener('click', () => {
+                menuDrawer.classList.toggle('active');
+            });
+
+            // Fermer si clic en dehors
+            document.addEventListener('click', (e) => {
+                if (!menuDrawer.contains(e.target) && !burger.contains(e.target)) {
+                    menuDrawer.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
