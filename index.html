@@ -26,46 +26,50 @@
 
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <!-- Lien vers le fichier CSS externe -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
     <!-- Bandeau fixe en haut -->
     <div class="bandeau">
         <!-- Bouton burger -->
         <div class="burger-menu" id="burger" aria-label="Menu" role="button" tabindex="0">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
+            <div class="bar"></div> <!-- Fin de .bar -->
+            <div class="bar"></div> <!-- Fin de .bar -->
+            <div class="bar"></div> <!-- Fin de .bar -->
+        </div> <!-- Fin de #burger -->
+
         <nav>
             <!-- Menu -->
             <div class="menu-drawer" id="menuDrawer">
                 <ul class="menu">
                     <li><a href="index.html">Accueil</a></li>
                     <li>
-                        <a href="#">Pâtisserie</a>               		
+                        <a href="#">Pâtisserie</a>
+                        <!-- sous-menu -->
                         <ul class="submenu">
-                 <li><a href="recettes.html">Mes recettes</a></li>
-                        </ul>				
-                    </li>
+                            <li><a href="recettes.html">Mes recettes</a></li>
+                        </ul> <!-- Fin de .submenu -->
+                    </li> <!-- Fin du li Pâtisserie -->
                     <li>
                         <a href="#">Smoothies</a>
+                        <!-- sous-menu -->
                         <ul class="submenu">
                             <li><a href="">Smoothies à la fraise</a></li>
-                        </ul>
-                    </li>
+                        </ul> <!-- Fin de .submenu -->
+                    </li> <!-- Fin du li Smoothies -->
                     <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+                </ul> <!-- Fin de ul.menu -->
+            </div> <!-- Fin de .menu-drawer -->
         </nav>
-    </div>
+    </div> <!-- Fin de .bandeau -->
+
     <!-- Contenu principal -->
     <div class="content">
         <!-- Introduction -->
         <section class="intro">
             <header>
                 <img src="images/header.png" alt="Logo" style="height:400px;">
-            </header>
+            </header> <!-- Fin de header -->
             <h3>"La gourmandise est l'art d'utiliser la nourriture pour créer du bonheur."</h3>
             <p>
                 Je m'appelle Nathalie, mariée et maman de 4 enfants. Je suis passionnée de cuisine. J'ai décidé de partager les petits plats que j'aime.
@@ -75,8 +79,8 @@
                 Je puise mon inspiration dans les livres de grands chefs, dans les blogs, dans les magazines...
                 À vos fourneaux…
             </p>
-        </section>
-    </div>
+        </section> <!-- Fin de section.intro -->
+    </div> <!-- Fin de div.content (intro) -->
 
     <!-- Contenu principal -->
     <div class="content">
@@ -88,48 +92,53 @@
                     <div class="photo-card">
                         <a href="bavarois.html">
                             <img src="images/bavarois.jpg" alt="groupe" class="image-doree" />
-                        </a>
-                        <h3 class="titre-blanc"><a href="bavarois.html">Bavarois</a></h3>
+                        </a> <!-- Fin de a -->
+                        <h3 class="titre-blanc"><a href="bavarois.html">Bavarois</a></h3> <!-- Fin de a -->
                         <!-- Après la section intro ou à l'endroit où vous souhaitez le bouton -->
                         <div style="text-align: center; margin: 30px 0;">
                             <a href="bavarois.html" class="btn-recette">Voir la recette</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        </div> <!-- Fin de div style -->
+                    </div> <!-- Fin de .photo-card -->
+                </div> <!-- Fin de .description -->
+            </div> <!-- Fin de .card #recette1 -->
+
             <!-- Carte 2 -->
             <div class="card" id="recette2">
                 <div class="description">
                     <div class="photo-card">
                         <a href="buche_chocolat.html">
                             <img src="images/buche_chocolat.jpg" alt="écriture" class="image-doree" />
-                        </a>
-                        <h3 class="titre-blanc"><a href="buche_au_chocolat.html">Bûche au chocolat</a></h3>
+                        </a> <!-- Fin de a -->
+                        <h3 class="titre-blanc"><a href="buche_au_chocolat.html">Bûche au chocolat</a></h3> <!-- Fin de a -->
                         <!-- Après la section intro ou à l'endroit où vous souhaitez le bouton -->
                         <div style="text-align: center; margin: 30px 0;">
                             <a href="buche_au_chocolat.html" class="btn-recette">Voir la recette</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Livre 3 -->
+                        </div> <!-- Fin de div style -->
+                    </div> <!-- Fin de .photo-card -->
+                </div> <!-- Fin de .description -->
+            </div> <!-- Fin de .card #recette2 -->
+
+            <!-- Carte 3 -->
             <div class="card" id="recette3">
                 <div class="description">
                     <div class="photo-card">
                         <a href="pavlova.html">
                             <img src="images/pavlova.jpeg" alt="écriture" class="image-doree" />
-                        </a>
-                        <h3 class="titre-blanc"><a href="pavlova.html">Bûche au chocolat</a></h3>
+                        </a> <!-- Fin de a -->
+                        <h3 class="titre-blanc"><a href="pavlova.html">Pavlova</a></h3> <!-- Fin de a -->
                         <!-- Après la section intro ou à l'endroit où vous souhaitez le bouton -->
                         <div style="text-align: center; margin: 30px 0;">
-                            <a href="buche_chocolat.html" class="btn-recette">Voir la recette</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                            <a href="pavlova.html" class="btn-recette">Voir la recette</a>
+                        </div> <!-- Fin de div style -->
+                    </div> <!-- Fin de .photo-card -->
+                </div> <!-- Fin de .description -->
+            </div> <!-- Fin de .card #recette3 -->
+        </section> <!-- Fin de section#recette -->
+    </div> <!-- Fin de div.content (second) -->
+
     <!-- Pied de page -->
     <footer id="footer">
-        <p>&copy; 2025 lamarysedoree.github.io<br>Tous droits réservés. Design et contenu créés par<br><i>Eric et Nathalie</i></p>			
+        <p>&copy; 2025 lamarysedoree.github.io<br>Tous droits réservés. Design et contenu créés par<br><i>Eric et Nathalie</i></p>
         <!-- Boutons sociaux -->
         <div class="social-buttons">
             <!-- Facebook -->
@@ -137,15 +146,16 @@
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flamarysedoree.github.io" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-facebook-f"></i> Facebook
                 </a>
-            </div>
+            </div> <!-- Fin de .social-btn facebook -->
             <!-- Twitter -->
             <div class="social-btn twitter">
                 <a href="https://twitter.com/intent/tweet?text=Découvrez%20ce%20site%20fantastique%20https%3A%2F%2Flamarysedoree.github.io" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-twitter"></i> Twitter
                 </a>
-            </div>
-        </div>
-    </footer>
+            </div> <!-- Fin de .social-btn twitter -->
+        </div> <!-- Fin de .social-buttons -->
+    </footer> <!-- Fin de footer#footer -->
+
     <!-- Script burger menu -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
