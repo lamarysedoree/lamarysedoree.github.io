@@ -553,6 +553,49 @@ p.quote {
   background-color: #B17E1E;  /* ton plus foncé au hover */
   transform: scale(1.05);
 }
+
+/* Grille des recettes */
+/* Section liens */
+.liens-recettes {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.liens-recettes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 600px;
+  width: 100%;
+}
+
+.liens-recettes li {
+  margin: 10px 0;
+}
+
+/* Pour les liens dans recettes.html */
+.liens-recettes a {
+  display: block;
+  padding: 15px 20px;
+  background-color: #8B5E3C; /* couleur de fond pour liens */
+  border-radius: 8px;
+  text-decoration: none;
+  color: #D4AF37; /* Doré */
+  text-align: center; /* texte centré*/
+  font-size: 1.2em;
+  font-family: 'FairWaterScript', cursive, Arial, sans-serif;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.liens-recettes a:hover {
+  border-color: #DEA62B; /* bordure dorée au hover */
+  background-color: #A5694A; /* un peu plus clair au hover */
+  color: #fff; /* reste blanc */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
 /* ------------------------------------------- FIN DES STYLES GLOBAUX ------------------------------------------- */
 
 /* =========================== STYLES RESPONSIVE (pour mobiles et petits écrans) =========================== */
@@ -780,6 +823,10 @@ textarea {
 @media (min-width: 769px) {
   .netflix-menu .menu {
     display: flex !important;
-    flex-direction: row;
+    flex-direction: row;	
+  }
+  .liens-recettes a {
+    font-size: 1.1em;
+    padding: 12px 16px;
   }
 }
