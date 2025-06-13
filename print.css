@@ -43,7 +43,7 @@
     color: #000; /* Assurer la lisibilité des liens si présents */	
   }
   .espace {
-    height: 110px; /* espace supplémentaire */
+    height: 130px; /* espace supplémentaire */
     display: block;
   }
 }
