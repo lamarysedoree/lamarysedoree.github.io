@@ -1,9 +1,15 @@
 # staticman.yml
-branch: main
-commitMessage: "Nouveau commentaire"
-path: "_comments"
-filename: "comments/{{date}}-{{slug}}.json"
+branch: main  # ou 'gh-pages', selon ta branche principale
+path: comments/{{fields.slug}}.json  # fichier JSON par page, basé sur le slug
+moderation: false  # mettre à true si tu veux modérer automatiquement
 allowedFields:
   - name
   - email
   - message
+  - slug
+files:
+  "comments/{{fields.slug}}.json":  # fichier JSON spécifique par slug
+    label: Commentaires
+    name: comments
+    path: comments/{{fields.slug}}.json
+    max: 1000
