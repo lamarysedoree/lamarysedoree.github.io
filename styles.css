@@ -612,28 +612,77 @@ p.quote {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
- #cusdis_thread {
-    font-family: 'Georgia', serif;
-    background-color:#5E3200; /* couleur chocolat */
-    color: #FFF8DC; /* blanc cassé */
-    padding: 15px;
-	font-size: 1.2em;
-    border-radius: 12px;
-    border: 2px solid #FFD700; /* bordure dorée */
-    max-width: 800px;
-    margin: 0 auto;
-    width: 100%;/* pour s'adapter sur mobile ou réduire la largeur */
-    height: auto;
-    overflow: visible;
-	box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-	position: relative;
-    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-    box-sizing: border-box;
-    display: block;
-	height: auto !important;
-    max-height: none !important;
-    overflow: visible;
+/* Centrer le conteneur des commentaires */
+#id_comments {
+  display: flex;
+  justify-content: center; /* Centrer contenu horizontalement */
+  align-items: flex-start; /* Alignement en haut */
+  margin: 20px auto; /* Centrer la div dans le parent horizontalement */
+  background-color: #84623c !important; /* Couleur chocolat principal */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 2px solid #FFD700; /* Bordure dorée */
+  max-width: 800px;
+  padding: 15px;
+  font-family: 'Georgia', serif;
+  font-size: 1.2em;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  box-sizing: border-box;
 }
+
+/* Personnalisation des couleurs pour chaque partie spécifique */
+
+// Auteur
+#id_comments .comment-author {
+  color: #D2691E !important; /* Brun chocolat clair pour le nom de l'auteur */
+}
+
+// Contenu du commentaire
+#id_comments .comment-text {
+  color: #F5DEB3 !important; /* Beige chocolat clair pour le texte du commentaire */
+}
+
+// Réponse (contenu dans .response)
+#id_comments .response {
+  background-color: #3C1F1F; /* Violet foncé ou marron foncé pour différencier */
+  color: #FFFFFF !important; /* Texte blanc dans la réponse */
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+  border: 1px solid #FFD700; /* Bordure dorée pour la réponse */
+}
+
+// Texte des réponses
+#id_comments .reply-text {
+  color: #DAA520 !important; /* Doré plus chaud pour le texte des réponses */
+}
+
+// Si vous avez des balises spécifiques comme <span class="special"> dans le contenu
+#id_comments span.special {
+  color: #C68642 !important; /* Orangé doré pour les éléments spéciaux */
+}
+
+// Pour les éléments de commentaire individuels
+.comment {
+  background-color: #5E3A2E; /* Ton chocolat moyen pour chaque commentaire */
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #FFD700; /* Bordure dorée */
+}
+
+/* Si vous souhaitez changer la couleur des liens dans le widget IntenseDebate */
+.intensedebate-container a {
+  color: #D2B48C; /* Couleur beige doré claire */
+}
+
+.intensedebate-container a:hover {
+  color: #FFD700; /* Doré au survol */
+}
+
+
+
 
 /* ------------------------------------------- FIN DES STYLES GLOBAUX ------------------------------------------- */
 
