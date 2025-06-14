@@ -3,73 +3,79 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>La maryse dorée - Blog de pâtisserie</title>
-    <meta name="keywords" content="maryse dorée, pâtisserie, recettes pâtisseries, gâteaux, smoothie,bavarois,pavlova, fraisier" />
-    <!-- Métadonnées de base -->
-    <meta name="description" content="La Maryse Dorée: votre blog pour réussir desserts gourmands, astuces et recettes  pour amateurs et pros (bavarois, Pavlova, Forêt noire, Panacotta, fraisiers, choux à la crème…)." />
+    <meta name="keywords" content="maryse dorée, pâtisserie, recettes pâtisseries, gâteaux, smoothie, bavarois, pavlova, fraisier" />
+    <meta name="description" content="La Maryse Dorée: votre blog pour réussir desserts gourmands, astuces et recettes pour amateurs et pros (bavarois, Pavlova, Forêt noire, Panacotta, fraisiers, choux à la crème…)" />
     <meta name="author" content="La maryse dorée" />
     <meta name="language" content="fr" />
     <meta name="theme-color" content="#ffffff" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="La maryse dorée" />
-    <meta property="og:description" content="La Maryse Dorée: votre blog pour réussir desserts gourmands, astuces et recettes  pour amateurs et pros (bavarois, Pavlova, Forêt noire, Panacotta, fraisiers, choux à la crème…)." />
+    <meta property="og:description" content="La Maryse Dorée: votre blog pour réussir desserts gourmands, astuces et recettes pour amateurs et pros (bavarois, Pavlova, Forêt noire, Panacotta, fraisiers, choux à la crème…)" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://lamarysedoree.github.io" />
-    <meta property="og:image" content="images/og-image.png" /> 
+    <meta property="og:image" content="images/og-image.png" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="La maryse dorée" />
-    <meta name="twitter:description" content="La Maryse Dorée: votre blog pour réussir desserts gourmands, astuces et recettes  pour amateurs et pros (bavarois, Pavlova, Forêt noire, Panacotta, fraisiers, choux à la crème…)." />
-    <meta name="twitter:image" content="images/og-image.png" /> 
+    <meta name="twitter:description" content="La Maryse Dorée: votre blog pour réussir desserts gourmands, astuces et recettes pour amateurs et pros (bavarois, Pavlova, Forêt noire, Panacotta, fraisiers, choux à la crème…)" />
+    <meta name="twitter:image" content="images/og-image.png" />
 
+    <!-- Favicon et CSS -->
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <!-- Lien vers le fichier CSS externe -->
     <link rel="stylesheet" href="styles.css" />
-    <!-- Ajout de la police Font Awesome pour les icônes sociales -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-    <!-- Bandeau fixe en haut -->
+    <!-- ==========================
+         Bandeau fixe en haut
+         ========================== -->
     <div class="bandeau">
-        <!-- Bouton burger -->
+        <!-- ==========================
+             Bouton burger
+             ========================== -->
         <div class="burger-menu" id="burger" aria-label="Menu" role="button" tabindex="0">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
+        <!-- ==========================
+             Menu déroulant
+             ========================== -->
         <nav>
-            <!-- Menu -->
-            <div class="menu-drawer" id="menuDrawer">
+            <div class="menu-drawer" id="menuDrawer" aria-hidden="true">
                 <ul class="menu">
                     <li><a href="index.html">Accueil</a></li>
                     <li>
                         <a href="#">Pâtisserie</a>
-                        <!-- sous-menu -->
                         <ul class="submenu">
                             <li><a href="recettes.html">Mes recettes</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#">Smoothies</a>
-                        <!-- sous-menu -->
                         <ul class="submenu">
-                            <li><a href="">Smoothies à la fraise</a></li>
+                            <li><a href="#">Smoothies à la fraise</a></li>
                         </ul>
                     </li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-            </div>
+            </div> <!-- Fin menu-drawer -->
         </nav>
-    </div>
+    </div> <!-- Fin bandeau -->
 
-    <!-- Contenu principal -->
+    <!-- ==========================
+         Contenu principal
+         ========================== -->
     <div class="content">
         <!-- Introduction -->
         <section class="intro">
             <header>
-                <img src="images/header.png" alt="Logo" style="height:400px;">
+                <img src="images/header.png" alt="Logo" style="height:400px" />
             </header>
             <h3>"La gourmandise est l'art d'utiliser la nourriture pour créer du bonheur."</h3>
             <p>
@@ -80,135 +86,168 @@
                 Je puise mon inspiration dans les livres de grands chefs, dans les blogs, dans les magazines...
                 À vos fourneaux…
             </p>
-        </section>
-    </div>
+        </section> <!-- Fin section intro -->
+    </div> <!-- Fin div content -->
 
-    <!-- Contenu principal avec les cartes alignées -->
-	<!-- Section pour cartes 1 à 3 -->
+    <!-- ==========================
+         Cartes 1 à 3
+         ========================== -->
     <div class="content">
-        <section id="cartesalignées" class="cartes-alignées">
+        <section id="cartes-alignées-1" class="cartes-alignées">
             <!-- Carte 1 -->
             <div class="card" id="recette1">
                 <div class="description">
                     <div class="photo-card">
                         <a href="bavarois.html">
-                            <img src="images/bavarois.jpg" alt="groupe" class="image-doree" />
+                            <img src="images/bavarois.jpg" alt="Bavarois" class="image-doree" />
                         </a>
-                        <h3 class="titre-blanc"><a href="bavarois.html">Bavarois</a></h3>
+                        <h3 class="titre-blanc">
+                            <a href="bavarois.html">Bavarois</a>
+                        </h3>
                         <div style="text-align: center; margin: 30px 0;">
                             <a href="bavarois.html" class="btn-recette">Voir la recette</a>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </div> <!-- Fin photo-card -->
+                </div> <!-- Fin description -->
+            </div> <!-- Fin card recette1 -->
+
             <!-- Carte 2 -->
             <div class="card" id="recette2">
                 <div class="description">
                     <div class="photo-card">
                         <a href="buche_au_chocolat.html">
-                            <img src="images/buche_au_chocolat.jpg" alt="écriture" class="image-doree" />
+                            <img src="images/buche_au_chocolat.jpg" alt="Bûche au chocolat" class="image-doree" />
                         </a>
-                        <h3 class="titre-blanc"><a href="buche_au_chocolat.html">Bûche au chocolat</a></h3>
+                        <h3 class="titre-blanc">
+                            <a href="buche_au_chocolat.html">Bûche au chocolat</a>
+                        </h3>
                         <div style="text-align: center; margin: 30px 0;">
                             <a href="buche_au_chocolat.html" class="btn-recette">Voir la recette</a>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </div> <!-- Fin photo-card -->
+                </div> <!-- Fin description -->
+            </div> <!-- Fin card recette2 -->
+
             <!-- Carte 3 -->
             <div class="card" id="recette3">
                 <div class="description">
                     <div class="photo-card">
                         <a href="pavlova.html">
-                            <img src="images/pavlova.jpeg" alt="écriture" class="image-doree" />
+                            <img src="images/pavlova.jpeg" alt="Pavlova" class="image-doree" />
                         </a>
-                        <h3 class="titre-blanc"><a href="pavlova.html">Pavlova</a></h3>
+                        <h3 class="titre-blanc">
+                            <a href="pavlova.html">Pavlova</a>
+                        </h3>
                         <div style="text-align: center; margin: 30px 0;">
                             <a href="pavlova.html" class="btn-recette">Voir la recette</a>
                         </div>
-                    </div>
-                </div>
-            </div>
-		</section>
-		<section id="cartesalignées" class="cartes-alignées">
+                    </div> <!-- Fin photo-card -->
+                </div> <!-- Fin description -->
+            </div> <!-- Fin card recette3 -->
+        </section> <!-- Fin section cartes-alignées-1 -->
+
+        <!-- ==========================
+             Cartes 4 à 6
+             ========================== -->
+        <section id="cartes-alignées-2" class="cartes-alignées">
             <!-- Carte 4 -->
             <div class="card" id="recette4">
                 <div class="description">
                     <div class="photo-card">
                         <a href="foret_noire.html">
-                            <img src="images/foret_noire.jpg" alt="groupe" class="image-doree" />
+                            <img src="images/foret_noire.jpg" alt="Forêt noire" class="image-doree" />
                         </a>
-                        <h3 class="titre-blanc"><a href="foret_noire.html">Forêt noire</a></h3>
+                        <h3 class="titre-blanc">
+                            <a href="foret_noire.html">Forêt noire</a>
+                        </h3>
                         <div style="text-align: center; margin: 30px 0;">
                             <a href="foret_noire.html" class="btn-recette">Voir la recette</a>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </div> <!-- Fin photo-card -->
+                </div> <!-- Fin description -->
+            </div> <!-- Fin card recette4 -->
+
             <!-- Carte 5 -->
             <div class="card" id="recette5">
                 <div class="description">
                     <div class="photo-card">
                         <a href="tartelette_snickers.html">
-                            <img src="images/tartelette_snickers.jpg" alt="écriture" class="image-doree" />
+                            <img src="images/tartelette_snickers.jpg" alt="Tartelette façon Snickers" class="image-doree" />
                         </a>
-                        <h3 class="titre-blanc"><a href="tartelette_snickers.html">Tartelette façon Snickers</a></h3>
+                        <h3 class="titre-blanc">
+                            <a href="tartelette_snickers.html">Tartelette façon Snickers</a>
+                        </h3>
                         <div style="text-align: center; margin: 30px 0;">
                             <a href="tartelette_snickers.html" class="btn-recette">Voir la recette</a>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </div> <!-- Fin photo-card -->
+                </div> <!-- Fin description -->
+            </div> <!-- Fin card recette5 -->
+
             <!-- Carte 6 -->
             <div class="card" id="recette6">
                 <div class="description">
                     <div class="photo-card">
                         <a href="3_chocolats.html">
-                            <img src="images/3_chocolats.jpg" alt="écriture" class="image-doree" />
+                            <img src="images/3_chocolats.jpg" alt="3 chocolats" class="image-doree" />
                         </a>
-                        <h3 class="titre-blanc"><a href="3_chocolats.html">3 chocolats</a></h3>
+                        <h3 class="titre-blanc">
+                            <a href="3_chocolats.html">3 chocolats</a>
+                        </h3>
                         <div style="text-align: center; margin: 30px 0;">
                             <a href="3_chocolats.html" class="btn-recette">Voir la recette</a>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+                    </div> <!-- Fin photo-card -->
+                </div> <!-- Fin description -->
+            </div> <!-- Fin card recette6 -->
+        </section> <!-- Fin section cartes-alignées-2 -->
+    </div> <!-- Fin div content -->
 
-    <!-- Pied de page -->
+    <!-- ==========================
+         Pied de page
+         ========================== -->
     <footer id="footer">
-        <p>&copy; 2025 lamarysedoree.github.io<br>Tous droits réservés. Design et contenu créés par<br><i>Eric et Nathalie</i></p>
-        <!-- Boutons sociaux -->
+        <p>
+            &copy; 2025 lamarysedoree.github.io<br />
+            Tous droits réservés. Design et contenu créés par<br />
+            <i>Eric et Nathalie</i>
+        </p>
+        <!-- boutons sociaux -->
         <div class="social-buttons">
             <!-- Facebook -->
             <div class="social-btn facebook">
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flamarysedoree.github.io" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-facebook-f"></i> Facebook
                 </a>
-            </div>
+            </div> <!-- Fin social-btn facebook -->
+
             <!-- Twitter -->
             <div class="social-btn twitter">
                 <a href="https://twitter.com/intent/tweet?text=Découvrez%20ce%20site%20fantastique%20https%3A%2F%2Flamarysedoree.github.io" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-twitter"></i> Twitter
                 </a>
-            </div>
-        </div>
-    </footer>
-    <!-- Script burger menu -->
+            </div> <!-- Fin social-btn twitter -->
+        </div> <!-- Fin social-buttons -->
+    </footer> <!-- Fin footer -->
+
+    <!-- Script pour menu burger -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const burger = document.getElementById('burger');
             const menuDrawer = document.getElementById('menuDrawer');
 
+            // Toggle la classe 'active' pour afficher/masquer le menu
             burger.addEventListener('click', () => {
                 menuDrawer.classList.toggle('active');
+                // Modifier aria-hidden pour l'accessibilité
+                menuDrawer.setAttribute('aria-hidden', String(!menuDrawer.classList.contains('active')));
             });
 
-            // Fermer si clic en dehors
+            // Fermer le menu si clic en dehors
             document.addEventListener('click', (e) => {
                 if (!menuDrawer.contains(e.target) && !burger.contains(e.target)) {
                     menuDrawer.classList.remove('active');
+                    menuDrawer.setAttribute('aria-hidden', 'true');
                 }
             });
         });
