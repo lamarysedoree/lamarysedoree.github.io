@@ -1,8 +1,0 @@
- 
-    plugins:
-  - jekyll-staticman
-
-staticman:
-  endpoint: "https://staticman3.web.app/v3/entry/github/lamarysedoree/lamarysedoree.github.io"
-
-    
