@@ -618,7 +618,7 @@ p.quote {
   justify-content: center; /* Centrer contenu horizontalement */
   align-items: flex-start; /* Alignement en haut */
   margin: 20px auto; /* Centrer la div dans le parent horizontalement */
-  background-color: #84623c !important; /* Couleur chocolat principal */
+  background-color: #5E3200 !important; /* Couleur chocolat principal */
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   border: 2px solid #FFD700; /* Bordure dorée */
