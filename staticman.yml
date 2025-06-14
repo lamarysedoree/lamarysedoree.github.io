@@ -1,20 +1,18 @@
-# staticman.yml
-
 name: Staticman Comments
 
 on:
   push:
     branches:
-      - main  # ou master
+      - main  # ou votre branche principale
 
 acceptance:
   headless: true
 
-permalink: /comments/{slug}
+permalink: /bavarois/  # URL de votre page ou article
 
 publish:
   branch: main
-  path: "_comments/{slug}.json"
+  path: "_comments/bavarois.json"
 
 comments:
   allowedFields: [name, email, message]
