@@ -613,7 +613,7 @@ p.quote {
 }
 
 /* Centrer le conteneur des commentaires */
-#id_comments {
+#disqus_thread {
   display: flex;
   justify-content: center; /* Centrer contenu horizontalement */
   align-items: flex-start; /* Alignement en haut */
@@ -629,59 +629,6 @@ p.quote {
   position: relative;
   transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
   box-sizing: border-box;
-}
-
-/* Personnalisation des couleurs pour chaque partie spécifique */
-
-// Auteur
-#id_comments .comment-author {
-  color: #D2691E !important; /* Brun chocolat clair pour le nom de l'auteur */
-}
-
-// Contenu du commentaire
-#id_comments .comment-text {
-  color: #F5DEB3 !important; /* Beige chocolat clair pour le texte du commentaire */
-}
-
-// Réponse (contenu dans .response)
-#id_comments .response {
-  background-color: #3C1F1F; /* Violet foncé ou marron foncé pour différencier */
-  color: #FFFFFF !important; /* Texte blanc dans la réponse */
-  padding: 10px;
-  border-radius: 8px;
-  margin-top: 10px;
-  border: 1px solid #FFD700; /* Bordure dorée pour la réponse */
-}
-
-// Texte des réponses
-#id_comments .reply-text {
-  color: #DAA520 !important; /* Doré plus chaud pour le texte des réponses */
-}
-
-// Si vous avez des balises spécifiques comme <span class="special"> dans le contenu
-#id_comments span.special {
-  color: #C68642 !important; /* Orangé doré pour les éléments spéciaux */
-}
-
-// Pour les éléments de commentaire individuels
-.comment {
-  background-color: #CDC0B1; /* Ton chocolat moyen pour chaque commentaire */
-  border-radius: 4px;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #FFD700; /* Bordure dorée */
-}
-
-/* Si vous souhaitez changer la couleur des liens dans le widget IntenseDebate */
-.intensedebate-container a {
-  color: #D2B48C; /* Couleur beige doré claire */
-}
-
-.intensedebate-container a:hover {
-  color: #FFD700; /* Doré au survol */
-}
-
-
 
 
 /* ------------------------------------------- FIN DES STYLES GLOBAUX ------------------------------------------- */
