@@ -611,6 +611,30 @@ p.quote {
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
+
+ #cusdis_thread {
+    font-family: 'Georgia', serif;
+    background-color:#5E3200; /* couleur chocolat */
+    color: #FFF8DC; /* blanc cassé */
+    padding: 15px;
+	font-size: 1.2em;
+    border-radius: 12px;
+    border: 2px solid #FFD700; /* bordure dorée */
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;/* pour s'adapter sur mobile ou réduire la largeur */
+    height: auto;
+    overflow: visible;
+	box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+	position: relative;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    box-sizing: border-box;
+    display: block;
+	height: auto !important;
+    max-height: none !important;
+    overflow: visible;
+}
+
 /* ------------------------------------------- FIN DES STYLES GLOBAUX ------------------------------------------- */
 
 /* =========================== STYLES RESPONSIVE (pour mobiles et petits écrans) =========================== */
