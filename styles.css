@@ -169,9 +169,11 @@ ul.submenu li a:hover {
     padding: 20px;
     max-width: 1200px; /* Limite de la largeur totale */
     margin: 0 auto; /* Centrage horizontal */
+	color: #FFFFE7; /* couleur chocolat blanc */
 }
-
-
+.recette p {
+  color: #FFFFE7;
+}
 /* Cartes de index.html*/
 .card {
     background-color: #5E3200;
@@ -230,6 +232,7 @@ ul.submenu li a:hover {
   text-align: left;
   box-sizing: border-box;
   margin: 0 auto; /* pour centrer si besoin */
+  color: #FFFFE7; /* couleur chocolat blanc */
 }
 
 .recette-unique .recette-card {
@@ -249,7 +252,13 @@ ul.submenu li a:hover {
   box-sizing: border-box;
   text-align: left;
 }
-
+.recette-card ul,
+.recette-card li {
+    color: #FFFFE7 !important;/* Chocolat blanc */
+}
+.recette-card .texte-centré p {
+    color: #FFFFFF !important;
+}
 /* Effet hover */
 .recette-unique .recette-card:hover {
   transform: translateY(-5px);
@@ -260,7 +269,7 @@ ul.submenu li a:hover {
 /* Pied de page */
 footer {
     width: 100%; /* Toute la largeur */
-    background-color: #5E3200; /* chocolat) */
+    background-color: #5E3200 !important; /* chocolat) */
     padding: 5px 0; /* Padding vertical */
     margin-top: 40px; /* Espace au-dessus */
     display: flex; /* Flexbox */
@@ -548,8 +557,29 @@ p.quote {
 }
 
 .texte-centré {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: #FFFFE7; /* Couleur chocolat blanc */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  white-space: pre-line; /* Permet de respecter les sauts de ligne dans le texte */
+  line-height: 0.8; /* Ajustez cette valeur selon vos préférences */
+  color: #FFFFE7; /* Couleur chocolat blanc */
+}
+
+.texte-centré::after {
+  content: ""; /* Ajoute un contenu vide */
+  display: block; /* Transforme en bloc pour forcer un saut de ligne */
+}
+
+/* Couleur chocolat blanc à tous les éléments <p>, <i> et <u> */
+.texte-centré p,
+.texte-centré i,
+.texte-centré u {
+  color: #FFFFE7;
 }
 
 /* Ajoutez cette règle à la fin de votre fichier styles.css */

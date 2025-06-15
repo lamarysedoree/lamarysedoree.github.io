@@ -1,38 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La maryse dorée - Le 3 chocolats</title>
-    <meta name="keywords" content="maryse dorée, pâtisserie, recettes pâtisseries, gâteaux, smoothie, bavarois, pavlova, fraisier" />
-    
-    <!-- Métadonnées de base -->
-    <meta name="description" content="La Maryse Dorée: votre blog pour réussir desserts gourmands, astuces et recettes  pour amateurs et pros (bavarois, Pavlova, Forêt noire, Panacotta, fraisiers, choux à la crème…)." />
-    <meta name="author" content="La maryse dorée" />
-    <meta name="language" content="fr" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="keywords" content="maryse dorée, pâtisserie, recettes pâtisseries, gâteaux, smoothie, bavarois, pavlova, fraisier">
+    <meta name="description" content="La Maryse Dorée: votre blog pour réussir desserts gourmands, astuces et recettes pour amateurs et pros (bavarois, Pavlova, Forêt noire, Panacotta, fraisiers, choux à la crème…).">
+    <meta name="author" content="La maryse dorée">
+    <meta name="language" content="fr">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="La maryse dorée" />
-    <meta property="og:description" content="La Maryse Dorée: votre blog pour réussir desserts gourmands, astuces et recettes  pour amateurs et pros (bavarois, Pavlova, Forêt noire, Panacotta, fraisiers, choux à la crème…)." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://lamarysedoree.github.io" />
-    <meta property="og:image" content="images/og-image.png" /> 
+    <meta property="og:title" content="La maryse dorée">
+    <meta property="og:description" content="La Maryse Dorée: votre blog pour réussir desserts gourmands, astuces et recettes pour amateurs et pros (bavarois, Pavlova, Forêt noire, Panacotta, fraisiers, choux à la crème…).">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lamarysedoree.github.io">
+    <meta property="og:image" content="images/og-image.png">
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="La maryse dorée" />
-    <meta name="twitter:description" content="La Maryse Dorée: votre blog pour réussir desserts gourmands, astuces et recettes  pour amateurs et pros (bavarois, Pavlova, Forêt noire, Panacotta, fraisiers, choux à la crème…)." />
-    <meta name="twitter:image" content="images/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="La maryse dorée">
+    <meta name="twitter:description" content="La Maryse Dorée: votre blog pour réussir desserts gourmands, astuces et recettes pour amateurs et pros (bavarois, Pavlova, Forêt noire, Panacotta, fraisiers, choux à la crème…).">
+    <meta name="twitter:image" content="images/og-image.png">
 
     <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Font Awesome pour icônes sociales -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Fichier CSS externe -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="print.css" media="print">
 </head>
 <body>
@@ -50,10 +48,10 @@
                 <ul class="menu">
                     <li><a href="index.html">Accueil</a></li>
                     <li>
-                        <a href="#">Pâtisserie</a>               		
+                        <a href="#">Pâtisserie</a>
                         <ul class="submenu">
                             <li><a href="recettes.html">Mes recettes</a></li>
-                        </ul>				
+                        </ul>
                     </li>
                     <li>
                         <a href="#">Smoothies</a>
@@ -74,127 +72,139 @@
             <header>
                 <img src="images/header.png" alt="Logo" style="height:400px;">
             </header> <!-- fin header -->
+
             <div class="content h2">
-                <h2>Le 3 chocolats</h2><br>
             </div> <!-- fin div.content.h2 -->
-        
-            <!-- Section recette -->
-            <section id="recette" class="recette recette-unique">
+
+            <!-- Remplacement de la section par une div avec un titre -->
+            <div id="recette" class="recette recette-unique">
                 <div class="recette-card" id="recette1">
-                    <div class="print-icon" onclick="imprimerRecette()" title="Imprimer cette recette">
+                    <h2>Le 3 chocolats</h2>
+                    <!-- Icône imprimer -->
+                    <div class="print-icon" onclick="imprimerRecette()" title="Imprimer cette recette" style="cursor:pointer;">
                         <i class="fas fa-print"></i>
                     </div> <!-- fin print-icon -->
 
-                    <!-- contenu de la recette -->
-                    <img src="images/3_chocolats.jpg" alt="groupe" class="image-doree" />
+                    <!-- Image de la recette -->
+                    <img src="images/3_chocolats.jpg" alt="groupe" class="image-doree">
 
                     <!-- Informations générales -->
-<div class="texte-centré">
-     Temps de préparation : 2h<br>
-     Temps de repos : 1h<br>
-     Temps de cuisson : 30 min<br>
-     Difficulté : Moyenne<br>
-     Ingrédients (8 personnes) :</p>
-</div>
+                    <div class="texte-centré">
+                        Temps de préparation: 2h<br>
+                        Temps de repos: 1h<br>
+                        Temps de cuisson: 30 min<br>
+                        Difficulté: Moyenne<br>
+                        Ingrédients(8 personnes):<br>
+                    </div>
 
-<!-- Ingrédients -->
-<b>Ingrédients:</b><br><br>
+                    <!-- Ingrédients -->
+                    <strong>Ingrédients :</strong><br>
 
-<!-- Ingrédients du streusel -->
-<u>Pour le streusel :</u>
-<ul>
-  <li>10 g de beurre (à température ambiante)</li>
-  <li>10 g de cassonade</li>
-  <li>10 g de poudre d’amandes</li>
-  <li>10 g de farine</li>
-</ul>
+                    <!-- Ingrédients du streusel -->
+                    <u>Pour le streusel :</u>
+                    <ul>
+                        <li>10 g de beurre (à température ambiante)</li>
+                        <li>10 g de cassonade</li>
+                        <li>10 g de poudre d’amandes</li>
+                        <li>10 g de farine</li>
+                    </ul>
 
-<!-- Ingrédients du biscuit au chocolat -->
-<u>Pour le biscuit au chocolat :</u>
-<ul>
-  <li>1 œuf</li>
-  <li>15 g de miel d’acacia</li>
-  <li>25 g de sucre</li>
-  <li>15 g de poudre d’amandes</li>
-  <li>1,5 g de levure chimique</li>
-  <li>24 g de farine type 45</li>
-  <li>5 g de cacao en poudre non sucré</li>
-  <li>24 g de crème liquide</li>
-  <li>28 g de beurre</li>
-  <li>13 g de chocolat noir</li>
-</ul>
+                    <!-- Ingrédients du biscuit au chocolat -->
+                    <u>Pour le biscuit au chocolat :</u>
+                    <ul>
+                        <li>1 œuf</li>
+                        <li>15 g de miel d’acacia</li>
+                        <li>25 g de sucre</li>
+                        <li>15 g de poudre d’amandes</li>
+                        <li>1,5 g de levure chimique</li>
+                        <li>24 g de farine type 45</li>
+                        <li>5 g de cacao en poudre non sucré</li>
+                        <li>24 g de crème liquide</li>
+                        <li>28 g de beurre</li>
+                        <li>13 g de chocolat noir</li>
+                    </ul>
 
-<!-- Ingrédients des mousses -->
-<b>Pour les mousses :</b><br><br>
+                    <!-- Ingrédients des mousses -->
+                    <strong>Pour les mousses :</strong>
 
-<u>Mousse au chocolat blanc :</u>
-<ul>
-  <li>40 g de lait entier</li>
-  <li>1 g de gélatine</li>
-  <li>60 g de chocolat blanc</li>
-  <li>80 g de crème fleurette</li>
-</ul>
+                    <p><u>mousse au chocolat blanc :</u></p>
+                    <ul>
+                        <li>40 g de lait entier</li>
+                        <li>1 g de gélatine</li>
+                        <li>60 g de chocolat blanc</li>
+                        <li>80 g de crème fleurette</li>
+                    </ul>
 
-<u>Mousse au chocolat au lait :</u>
-<ul>
-  <li>40 g de lait entier</li>
-  <li>1 g de gélatine</li>
-  <li>60 g de chocolat au lait</li>
-  <li>80 g de crème fleurette</li>
-</ul>
+                    <p><u>mousse au chocolat au lait :</u></p>
+                    <ul>
+                        <li>40 g de lait entier</li>
+                        <li>1 g de gélatine</li>
+                        <li>60 g de chocolat au lait</li>
+                        <li>80 g de crème fleurette</li>
+                    </ul>
 
-<u>Mousse au chocolat noir :</u>
-<ul>
-  <li>40 g de lait entier</li>
-  <li>1 g de gélatine</li>
-  <li>40 g de chocolat noir 70%</li>
-  <li>80 g de crème fleurette</li>
-</ul>
+                    <p><u>mousse au chocolat noir :</u></p>
+                    <ul>
+                        <li>40 g de lait entier</li>
+                        <li>1 g de gélatine</li>
+                        <li>40 g de chocolat noir 70%</li>
+                        <li>80 g de crème fleurette</li>
+                    </ul>
 
-<!-- Ingrédients du glaçage miroir -->
-<u>Pour le glaçage miroir au cacao :</u>
-<ul>
-  <li>210 g de sucre en poudre</li>
-  <li>75 g d’eau</li>
-  <li>70 g de cacao en poudre non sucré</li>
-  <li>145 g de crème liquide</li>
-  <li>8 g de gélatine</li>
-</ul>
+                    <!-- Ingrédients du glaçage miroir -->
+                    <u>Pour le glaçage miroir au cacao :</u>
+                    <ul>
+                        <li>210 g de sucre en poudre</li>
+                        <li>75 g d’eau</li>
+                        <li>70 g de cacao en poudre non sucré</li>
+                        <li>145 g de crème liquide</li>
+                        <li>8 g de gélatine</li>
+                    </ul>
 
-<!-- Préparation -->
-<b>Préparation:</b>
-<div class="texte-centré">
-  <b><i>Étapes :</i></b>
-</div>
-<ol>
-  <li><u>Le streusel:</u><br><br>
-         Mélangez tous les ingrédients à la main jusqu’à obtenir une pâte friable.
-		 Déposez-la sur une plaque recouverte de papier cuisson et enfournez à 150°C pendant 10 minutes. Réservez.</li><br>
-  <li><u>Le biscuit au chocolat:</u><br><br>
-         Fouettez l’œuf, le miel et le sucre. Ajoutez la poudre d’amandes, la levure, la farine tamisée et le cacao.
-		 Faites fondre le chocolat, le beurre et la crème, puis incorporez au mélange.
-		 Versez dans un cercle de 18 cm, parsemez de streusel, et enfournez à 160°C pendant 20 minutes.
-		 Laissez refroidir et découpez pour ajuster à votre moule.</li><br>
-  <li><u>Les mousses:</u><br><br>
-         Pour chaque mousse, trempez la gélatine dans de l’eau froide 10 min.
-		 Faites fondre le chocolat concerné, chauffez le lait, y dissoudre la gélatine puis versez sur le chocolat.
-		 Ajoutez 80 g de crème montée délicatement et coulez dans le moule.
-		 Réservez au congélateur 30 min entre chaque couche : blanc, lait, noir.</li><br>
-  <li><u>Le glaçage miroir:</u><br><br>
-         Faites chauffer la crème. Dans une casserole, portez à ébullition l’eau, le sucre, puis tamisez et incorporez le cacao.
-		 Ajoutez la gélatine égouttée, la crème chaude, mixez. Laissez refroidir à 30°C.</li><br>
-  <li><u>Montage et glaçage:</u><br><br>
-         Sortez l’entremets du congélateur, démoulez-le, déposez sur une grille.
-		 Versez le glaçage miroir en évitant les coulures. Laissez figer, puis décorez selon votre envie.</li>
-</ol>
+                    <!-- Préparation -->
+                    <strong>Préparation :</strong>
+                    <div class="texte-centré">
+                        <p><b><i>Étapes:</i></b></p>
+                    </div>
+                    <ol>
+                        <li>
+                            <u>Le streusel :</u>
+                            <p>Mélangez tous les ingrédients à la main jusqu’à obtenir une pâte friable.
+                            Déposez-la sur une plaque recouverte de papier cuisson et enfournez à 150°C pendant 10 minutes. Réservez.</p>
+                        </li>
+                        <li>
+                            <u>Le biscuit au chocolat :</u>
+                            <p>Fouettez l’œuf, le miel et le sucre. Ajoutez la poudre d’amandes, la levure, la farine tamisée et le cacao.
+                            Faites fondre le chocolat, le beurre et la crème, puis incorporez au mélange.
+                            Versez dans un cercle de 18 cm, parsemez de streusel, et enfournez à 160°C pendant 20 minutes.
+                            Laissez refroidir et découpez pour ajuster à votre moule.</p>
+                        </li>
+                        <li>
+                            <u>Les mousses :</u>
+                            <p>Pour chaque mousse, trempez la gélatine dans de l’eau froide 10 min.
+                            Faites fondre le chocolat concerné, chauffez le lait, y dissoudre la gélatine puis versez sur le chocolat.
+                            Ajoutez 80 g de crème montée délicatement et coulez dans le moule.
+                            Réservez au congélateur 30 min entre chaque couche : blanc, lait, noir.</p>
+                        </li>
+                        <li>
+                            <u>Le glaçage miroir :</u>
+                            <p>Faites chauffer la crème. Dans une casserole, portez à ébullition l’eau, le sucre, puis tamisez et le cacao.
+                            Ajoutez la gélatine égouttée, la crème chaude, mixez. Laissez refroidir à 30°C.</p>
+                        </li>
+                        <li>
+                            <u>Montage et glaçage :</u>
+                            <p>Sortez l’entremets du congélateur, démoulez-le, déposez sur une grille.
+                            Versez le glaçage miroir en évitant les coulures. Laissez figer, puis décorez selon votre envie.</p>
+                        </li>
+                    </ol>
                 </div> <!-- fin recette-card -->
-            </section> <!-- fin section recette -->
+            </div> <!-- fin div recette -->
         </section> <!-- fin section intro -->
     </div> <!-- fin div.content -->
 
     <!-- Pied de page -->
     <footer id="footer">
-        <p>&copy; 2025 lamarysedoree.guithub.io<br>Tous droits réservés. Design et contenu crée par<br><i>Eric et Nathalie</i></p>
+        <p>&copy; 2025 lamarysedoree.github.io<br>Tous droits réservés. Design et contenu créés par<br><i>Eric et Nathalie</i></p>
         <!-- Boutons sociaux -->
         <div class="social-buttons">
             <!-- Facebook -->
@@ -202,15 +212,21 @@
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flamarysedoree.github.io" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-facebook-f"></i> Facebook
                 </a>
-            </div> <!-- fin social-btn facebook -->
+            </div>
             <!-- Twitter -->
             <div class="social-btn twitter">
                 <a href="https://twitter.com/intent/tweet?text=Découvrez%20ce%20site%20fantastique%20https%3A%2F%2Flamarysedoree.github.io" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-twitter"></i> Twitter
                 </a>
-            </div> <!-- fin social-btn twitter -->
-        </div> <!-- fin social-buttons -->
-    </footer> <!-- fin footer -->
+            </div>
+            <!-- Badge W3C Validator dans le footer -->
+            <div style="text-align: center; margin-top: 2px;">
+                <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Flamarysedoree.github.io/3_chocolats.html" target="_blank" rel="noopener noreferrer">
+                    <img src="images/valid5.png" alt="Valid HTML5" style="width: 88px; height: 26px; border: 0;">
+                </a>
+            </div>
+        </div>
+    </footer>
 
     <!-- Scripts -->
     <script>
@@ -227,7 +243,7 @@
                 menuDrawer.classList.toggle('active');
             });
 
-            // Fermer si clic en dehors
+            // Fermer le menu si clic en dehors
             document.addEventListener('click', (e) => {
                 if (!menuDrawer.contains(e.target) && !burger.contains(e.target)) {
                     menuDrawer.classList.remove('active');

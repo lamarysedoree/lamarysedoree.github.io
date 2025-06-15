@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>La maryse dorée - Bavarois</title>
     <meta name="keywords" content="maryse dorée, pâtisserie, recettes pâtisseries, gâteaux, smoothie, bavarois, pavlova, fraisier" />
-
-    <!-- Métadonnées de base -->
     <meta name="description" content="La Maryse Dorée: votre blog pour réussir desserts gourmands, astuces et recettes pour amateurs et pros (bavarois, Pavlova, Forêt noire, Panacotta, fraisiers, choux à la crème…)." />
     <meta name="author" content="La maryse dorée" />
     <meta name="language" content="fr" />
@@ -34,18 +32,6 @@
     <!-- Fichier CSS externe -->
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="print.css" media="print" />
-
-    <!-- Styles internes pour aligner uniquement les li de la recette à gauche -->
-    <style>
-        /* Cible uniquement les listes dans la section recette */
-        #recette .recette-card ul {
-            text-align: left;
-        }
-        /* Si des listes ont un style spécifique, on peut préciser aussi la liste ordonnée */
-        #recette .recette-card ol {
-            text-align: left;
-        }
-    </style>
 </head>
 <body>
     <!-- Bandeau fixe en haut -->
@@ -86,20 +72,20 @@
         <!-- Introduction -->
         <section class="intro">
             <header>
-                <img src="images/header.png" alt="Logo" style="height:400px;">
+                <img src="images/header.png" alt="Logo" style="height:400px;" />
             </header>
 
             <!-- Titre de la recette -->
             <div class="content h2">
                 <h2>Bûche au chocolat</h2>
-                <br/>
+                <br />
             </div>
 
             <!-- Section recette -->
             <section id="recette" class="recette recette-unique">
                 <div class="recette-card" id="recette1">
                     <!-- Icone d'impression -->
-                    <div class="print-icon" onclick="imprimerRecette()" title="Imprimer cette recette" style="cursor:pointer;">
+                    <div class="print-icon" onclick="imprimerRecette()" title="Imprimer cette recette" style="cursor:pointer;" role="button" tabindex="0" aria-label="Imprimer la recette" onclick="imprimerRecette()">
                         <i class="fas fa-print"></i>
                     </div>
 
@@ -107,9 +93,11 @@
                     <img src="images/buche_au_chocolat.jpg" alt="gâteau bûche au chocolat" class="image-doree" />
 
                     <!-- Texte de la recette centrée -->
-                    <span class="texte-centré">
-                        <b>Ingrédients</b><br>
-						<b>(pour 10 personnes)</b></span><br><br>
+                    <div class="texte-centré">
+                        <b>Ingrédients</b><br />
+                        <b>(pour 10 personnes)</b>
+						</div>
+                        <br /><br />
 
                         <!-- Ingrédients pour le biscuit -->
                         <u>Pour le biscuit à rouler :</u>
@@ -135,17 +123,17 @@
                         <u>Étapes de préparation:</u>
                         <ol>
                             <li>Préchauffez le four à 200 °C.</li>
-                            <li>Préparez le biscuit:</li>                                
+                            <li>Préparez le biscuit :</li>
                             <li>Séparez les blancs des jaunes.</li>
                             <li>Fouettez les jaunes au batteur électrique avec le sucre.</li>
-                            <li>Incorporez la farine et la levure.</li>                                                         
+                            <li>Incorporez la farine et la levure.</li>
                             <li>Fouettez les blancs battus en neige ferme et incorporez-les au mélange précédent.</li>
                             <li>Versez la pâte sur une plaque allant au four recouverte de papier cuisson. Enfournez pendant 10 minutes.</li>
                             <li>Démoulez sur un torchon humide, roulez avec le torchon et laissez refroidir.</li>
-                            <li>Préparez la crème au beurre :
+                            <li>Préparez la crème au beurre :</li>
                             <li>Fouettez le beurre au batteur électrique pour obtenir une crème.</li>
                             <li>Fouettez ensuite les 2 œufs entiers et le jaune, le sucre glace, le cacao et incorporez ce mélange au beurre.</li>
-                            <li>Travaillez quelques instants au batteur électrique.</li>                           
+                            <li>Travaillez quelques instants au batteur électrique.</li>
                             <li>Étalez les 2/3 de la crème au beurre sur la génoise, puis roulez la bûche.</li>
                             <li>Coupez les extrémités, puis recouvrez le gâteau de crème au chocolat.</li>
                             <li>Faites la décoration bois à l'aide des dents d'une fourchette.</li>
@@ -160,25 +148,23 @@
     <!-- Pied de page -->
     <footer id="footer" style="margin-top:20px; padding:10px; background:#f0f0f0;">
         <p>
-            &copy; 2025 lamarysedoree.github.io<br>
-            Tous droits réservés. Design et contenu créé par<br>
+            &copy; 2025 lamarysedoree.github.io<br />
+            Tous droits réservés. Design et contenu créé par<br />
             <i>Eric et Nathalie</i>
         </p>
         <!-- Boutons sociaux -->
-        <div class="social-buttons" style="display:flex; gap:10px;">
-            <!-- Facebook -->
-            <div class="social-btn facebook">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flamarysedoree.github.io" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:#3b5998;">
-                    <i class="fab fa-facebook-f"></i> Facebook
-                </a>
-            </div>
-            <!-- Twitter -->
-            <div class="social-btn twitter">
-                <a href="https://twitter.com/intent/tweet?text=Découvrez%20ce%20site%20fantastique%20https%3A%2F%2Flamarysedoree.github.io" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:#00acee;">
-                    <i class="fab fa-twitter"></i> Twitter
-                </a>
-            </div>
-        </div>
+        <div class="social-buttons" style="display:flex; gap:10px; justify-content:center;">
+    <div class="social-btn facebook">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flamarysedoree.github.io" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+    </div>
+    <div class="social-btn twitter">
+        <a href="https://twitter.com/intent/tweet?text=Découvrez%20ce%20site%20fantastique%20https%3A%2F%2Flamarysedoree.github.io" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i> Twitter
+        </a>
+    </div>
+</div>
     </footer>
 
     <!-- Scripts -->
@@ -199,17 +185,17 @@
             burger.addEventListener('click', () => {
                 const isActive = menuDrawer.classList.toggle('active');
                 // Mettre à jour ARIA
-                burger.setAttribute('aria-expanded', isActive);
+                burger.setAttribute('aria-expanded', String(isActive));
                 // Mettre à jour l'accessibilité
-                menuDrawer.setAttribute('aria-hidden', !isActive);
+                menuDrawer.setAttribute('aria-hidden', String(!isActive));
             });
 
             // Fermer si clic en dehors du menu
             document.addEventListener('click', (e) => {
                 if (!menuDrawer.contains(e.target) && !burger.contains(e.target)) {
                     menuDrawer.classList.remove('active');
-                    burger.setAttribute('aria-expanded', false);
-                    menuDrawer.setAttribute('aria-hidden', true);
+                    burger.setAttribute('aria-expanded', 'false');
+                    menuDrawer.setAttribute('aria-hidden', 'true');
                 }
             });
         });
