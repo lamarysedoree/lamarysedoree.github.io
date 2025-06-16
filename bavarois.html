@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>La maryse dorée - Bavarois</title>
     <meta name="keywords" content="maryse dorée, pâtisserie, recettes pâtisseries, gâteaux, smoothie,bavarois,pavlova, fraisier" />
-    
+
     <!-- Métadonnées de base -->
     <meta name="description" content="La Maryse Dorée: votre blog pour réussir desserts gourmands, astuces et recettes  pour amateurs et pros (bavarois, Pavlova, Forêt noire, Panacotta, fraisiers, choux à la crème…)." />
     <meta name="author" content="La maryse dorée" />
@@ -33,67 +33,77 @@
 
     <!-- Fichier CSS externe -->
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="print.css" media="print">
+    <link rel="stylesheet" href="print.css" media="print" />
 </head>
 <body>
     <!-- Bandeau fixe en haut -->
     <div class="bandeau">
         <!-- Bouton burger -->
         <div class="burger-menu" id="burger" aria-label="Menu" role="button" tabindex="0">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
+            <div class="bar"></div> <!-- Barre du burger -->
+            <div class="bar"></div> <!-- Barre du burger -->
+            <div class="bar"></div> <!-- Barre du burger -->
+        </div> <!-- Fin du bouton burger (burger-menu) -->
+
+        <!-- Navigation -->
         <nav>
-            <!-- Menu -->
+            <!-- Menu drawer (caché ou affiché) -->
             <div class="menu-drawer" id="menuDrawer">
+                <!-- Liste principale du menu -->
                 <ul class="menu">
                     <li><a href="index.html">Accueil</a></li>
                     <li>
-                        <a href="#">Pâtisserie</a>               		
+                        <a href="#">Pâtisserie</a>
+                        <!-- Sous-menu Pâtisserie -->
                         <ul class="submenu">
                             <li><a href="recettes.html">Mes recettes</a></li>
-                        </ul>				
+                        </ul> <!-- Fin sous-menu Pâtisserie -->
                     </li>
                     <li>
                         <a href="#">Smoothies</a>
+                        <!-- Sous-menu Smoothies -->
                         <ul class="submenu">
                             <li><a href="">Smoothies à la fraise</a></li>
-                        </ul>
+                        </ul> <!-- Fin sous-menu Smoothies -->
                     </li>
                     <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div> <!-- fin menu-drawer -->
+                </ul> <!-- Fin liste principale menu -->
+            </div> <!-- Fin menu-drawer -->
         </nav>
-    </div> <!-- fin bandeau -->
+    </div> <!-- Fin bandeau -->
 
     <!-- Contenu principal -->
     <div class="content">
         <!-- Introduction -->
         <section class="intro">
             <header>
+                <!-- Logo header -->
                 <img src="images/header.png" alt="Logo" style="height:400px;">
-            </header> <!-- fin header -->
+            </header> <!-- Fin header -->
+
+            <!-- Titre de la section -->
             <div class="content h2">
-                <h2>Bavarois</h2><br>
-            </div> <!-- fin div.content.h2 -->
-        
+            </div> <!-- Fin div.content.h2 -->
+
             <!-- Section recette -->
             <section id="recette" class="recette recette-unique">
+                <!-- Carte de la recette -->
                 <div class="recette-card" id="recette1">
+                    <!-- Icône impression -->
                     <div class="print-icon" onclick="imprimerRecette()" title="Imprimer cette recette">
                         <i class="fas fa-print"></i>
-                    </div> <!-- fin print-icon -->
-
-                    <!-- contenu de la recette -->
+                    </div> <!-- Fin print-icon -->
+                    <h2>Bavarois</h2><br>
+                    <!-- Image de la recette -->
                     <img src="images/bavarois.jpg" alt="groupe" class="image-doree" />
 
+                    <!-- Infos sur la recette -->
                     <div class="texte-centré">
                         Temps de préparation: 1h<br>
                         Temps de cuisson: 15 minutes<br>
                         Difficulté: Moyenne<br>
                         Ingrédients (8 personnes):
-                    </div>
+                    </div> <!-- Fin texte-centré -->
 
                     <!-- Ingrédients génoise -->
                     <ul>
@@ -102,7 +112,7 @@
                         <li>75G de sucre</li>
                         <li>70G de farine</li>
                         <li>4Cl de lait</li>
-                    </ul>
+                    </ul> <!-- Fin ingrédients génoise -->
 
                     <!-- Ingrédients mousse à la fraise -->
                     <ul>
@@ -112,7 +122,7 @@
                         <li>5 Feuilles de gélatine</li>
                         <li>40Cl de crème fluide entière</li>
                         <li>50G de sucre glace</li>
-                    </ul>
+                    </ul> <!-- Fin ingrédients mousse -->
 
                     <!-- Ingrédients miroir -->
                     <ul>
@@ -120,12 +130,14 @@
                         <li>250G de fraises</li>
                         <li>50G de sucre</li>
                         <li>2 Feuilles de gélatine</li>
-                    </ul>
-                    <br>
+                    </ul> <!-- Fin ingrédients miroir -->
 
-                    <div class="espace"></div> <!-- espace pour impression -->
+                    <br> <!-- Espace vertical -->
 
-                    <!-- Préparation -->
+                    <!-- Zone d'espace pour impression -->
+                    <div class="espace"></div>
+
+                    <!-- Section préparation -->
                     <span class="texte-centré"><b><i>Préparation:</i></b></span><br>
                     <ol>
                         <li>Préparez la génoise. Séparez les blancs des jaunes d’œuf. Ajoutez le sucre, la farine et le lait aux jaunes.</li>
@@ -135,44 +147,47 @@
                         <li>Préparez la mousse à la fraise. Équeutez et laver les fraises. Mixez les avec le sucre en poudre.</li>
                         <li>Faites ramollir la gélatine dans un bol d'eau froide.</li>
                         <li>Pendant ce temps, mettez la purée de fraises obtenue à chauffer dans une casserole.</li>
-                        <!-- Gélatine dissoute -->
+                        <!-- Dissolution gélatine -->
                         <li>Une fois la gélatine bien molle, faites la dissoudre dans la purée de fraises. Laissez tiédir.</li>
                         <li>Battez au fouet électrique la crème fluide et le sucre glace.</li>
                         <li>Ajoutez délicatement les fraises à la chantilly et mélangez bien.</li>
                         <li>Versez la mousse à la fraise sur la génoise et réservez au moins 2 heures au frigo avant de poursuivre.</li>
                         <li>Préparez le miroir. Équeutez et lavez les fraises. Mixez les avec le sucre.</li>
-                        <div class="espace"></div> <!-- autre espace pour impression -->
+                        <!-- Espace pour impression -->
+                        <div class="espace"></div>
                         <li>Faites ramollir la gélatine dans un bol d'eau froide.</li>
                         <li>Pendant ce temps, mettez la purée de fraises à chauffer dans une casserole.</li>
-                        <!-- Gélatine dissoute pour le miroir -->
+                        <!-- Dissolution gélatine pour miroir -->
                         <li>Une fois la gélatine bien molle, la faire dissoudre dans la purée de fruits. Laissez tiédir.</li>
                         <li>Versez le miroir sur la mousse à la fraise et réservez au moins 4 heures au frigo avant de démouler.</li>
                         <li>Pour démouler, passer un couteau lisse tout autour du cercle pour décoller la mousse et lever doucement.</li>
                         <li>Décorez avec quelques fraises supplémentaires.</li>
-                    </ol>
-                </div> <!-- fin recette-card -->
-            </section> <!-- fin section recette -->	
-		<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://la-maryse-doree.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </section> <!-- fin section intro -->
-    </div> <!-- fin div.content -->
+                    </ol> <!-- Fin liste de préparation -->
+                </div> <!-- Fin recette-card -->
+            </section> <!-- Fin section recette -->
+            
+            <!-- Disqus commentaires -->
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                *  Configuration Disqus (optionnel)
+                */
+                /*
+                var disqus_config = function () {
+                this.page.url = PAGE_URL;  // À définir si besoin
+                this.page.identifier = PAGE_IDENTIFIER; // À définir si besoin
+                };
+                */
+                (function() { // Script Disqus
+                var d = document, s = d.createElement('script');
+                s.src = 'https://la-maryse-doree.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Veuillez activer JavaScript pour voir les commentaires Disqus.</noscript>
+        </section> <!-- Fin section intro -->
+    </div> <!-- Fin div.content -->
 
     <!-- Pied de page -->
     <footer id="footer">
@@ -184,32 +199,41 @@
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flamarysedoree.github.io" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-facebook-f"></i> Facebook
                 </a>
-            </div> <!-- fin social-btn facebook -->
+            </div> <!-- Fin social-btn facebook -->
             <!-- Twitter -->
             <div class="social-btn twitter">
                 <a href="https://twitter.com/intent/tweet?text=Découvrez%20ce%20site%20fantastique%20https%3A%2F%2Flamarysedoree.github.io" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-twitter"></i> Twitter
                 </a>
-            </div> <!-- fin social-btn twitter -->
-        </div> <!-- fin social-buttons -->
-    </footer> <!-- fin footer -->
+            </div> <!-- Fin social-btn twitter -->
+            <!-- Badge W3C Validator -->
+            <div style="text-align: center; margin-top: 2px;">
+                <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Flamarysedoree.github.io/recettes.html" target="_blank" rel="noopener noreferrer">
+                    <img src="images/valid5.png" alt="Valid HTML5" style="width: 88px; height: 26px; border: 0;">
+                </a>
+            </div> <!-- Fin badge W3C -->
+        </div> <!-- Fin social-buttons -->
+    </footer> <!-- Fin footer -->
 
     <!-- Scripts -->
     <script>
+        // Fonction d'impression
         function imprimerRecette() {
             window.print();
         }
     </script>
     <script>
+        // Gestion du menu burger
         document.addEventListener('DOMContentLoaded', () => {
             const burger = document.getElementById('burger');
             const menuDrawer = document.getElementById('menuDrawer');
 
+            // Toggle du menu
             burger.addEventListener('click', () => {
                 menuDrawer.classList.toggle('active');
             });
 
-            // Fermer si clic en dehors
+            // Clic en dehors pour fermer
             document.addEventListener('click', (e) => {
                 if (!menuDrawer.contains(e.target) && !burger.contains(e.target)) {
                     menuDrawer.classList.remove('active');
