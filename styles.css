@@ -242,7 +242,7 @@ ul.submenu li a:hover {
   border: 2px solid #FFD700;
   width: 100%; /* pour s'adapter sur mobile ou réduire la largeur */
   max-width: 800px;
-  padding: 15px; /* réduit de 30px à 15px */
+  padding: 25px; /* espace intérieur */
   margin: 10px; /* ajoute une marge externe pour espacement entre cartes */
   color: #FFF8DC;
   font-family: 'Georgia', serif;
