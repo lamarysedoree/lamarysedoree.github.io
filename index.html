@@ -201,6 +201,29 @@
                 </div> <!-- Fin description -->
             </div> <!-- Fin card recette6 -->
         </section> <!-- Fin section cartes-alignées-2 -->
+		            </section>
+         <section>
+            <!-- Disqus commentaires -->
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                *  Configuration Disqus (optionnel)
+                */
+                /*
+                var disqus_config = function () {
+                this.page.url = PAGE_URL;  // À définir si besoin
+                this.page.identifier = PAGE_IDENTIFIER; // À définir si besoin
+                };
+                */
+                (function() { // Script Disqus
+                var d = document, s = d.createElement('script');
+                s.src = 'https://la-maryse-doree.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Veuillez activer JavaScript pour voir les commentaires Disqus.</noscript>
+         </section>
     </div> <!-- Fin div content -->
 
     <!-- ==========================
