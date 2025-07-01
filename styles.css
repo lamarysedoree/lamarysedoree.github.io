@@ -16,6 +16,7 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
 /* Style du header */
 header {
     background-color: #FFFFE7; /* Même fond que le body- chocolat blanc */
@@ -36,7 +37,7 @@ header {
     position: fixed; /* Fixe en haut de la fenêtre */
     top: 0; /* Position en haut */
     width: 100%; /* Prend toute la largeur */
-    background-color: #5E3200; /* Fond chocolat) */
+    background-color: #5E3200; /* Fond chocolat */
     box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Ombre pour relief */
     z-index: 1000; /* Sur le reste du contenu */
     padding: 1rem 1rem; /* Espacement interne */
@@ -131,6 +132,8 @@ ul.submenu li a:hover {
     color: #D4AF37;
     margin-bottom: 20px;
     font-size: 40px;
+    /* Remplacement de -webkit-text-stroke par une autre méthode pour le contour si nécessaire */
+    /* Si un contour est indispensable, considérer une ombre portée ou une autre technique */
     text-shadow:
         1px 1px 0 #999,
         2px 2px 0 #666,
@@ -247,26 +250,27 @@ ul.submenu li a:hover {
   position: relative;
   transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
   box-sizing: border-box;
-  text-align: left;
 }
+
+/* Règles pour listes et li dans recette-card */
 .recette-card ul,
 .recette-card li {
-    color: #FFFFE7 !important;/* Chocolat blanc */
+    color: #FFFFE7 !important; /* Chocolat blanc */
 }
 .recette-card .texte-centré p {
     color: #FFFFFF !important;
 }
-/* Effet hover */
+
+/* Effet hover pour recette-card */
 .recette-unique .recette-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.4);
 }
 
-
 /* Pied de page */
 footer {
     width: 100%; /* Toute la largeur */
-    background-color: #5E3200 !important; /* chocolat) */
+    background-color: #5E3200 !important; /* chocolat */
     padding: 5px 0; /* Padding vertical */
     margin-top: 40px; /* Espace au-dessus */
     display: flex; /* Flexbox */
@@ -296,7 +300,13 @@ h1 {
     font-family: 'FairWaterScript', cursive, Arial, sans-serif; /* Police script + fallback */
     font-size: 3em; /* Taille importante */
     color: #5E3200; /* Couleur chocolat */
-    -webkit-text-stroke: 0.5px black; /* Contour noir pour un effet de style */
+    /* Remplacer -webkit-text-stroke par une autre technique si nécessaire */
+    /* Par exemple, utiliser text-shadow pour simuler un contour si besoin */
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
     margin-bottom: 20px; /* Espace inférieur */
 }
 
@@ -305,7 +315,12 @@ h3 {
     font-family: 'FairWaterScript', cursive, Arial, sans-serif;
     font-size: 1.5em;
     color: #5E3200; /* Couleur chocolat */
-    -webkit-text-stroke: 0.5px black;
+    /* Même technique pour contour si besoin */
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
     margin-bottom: 20px;
 }
 
@@ -314,7 +329,12 @@ h4 {
     font-family: 'FairWaterScript', cursive, Arial, sans-serif;
     font-size: 1.2em;
     color: #5E3200; /* Couleur chocolat */
-    -webkit-text-stroke: 0.5px black;
+    /* Même technique pour contour */
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
     margin-bottom: 20px;
 }
 
@@ -322,7 +342,12 @@ h4 {
     color: #FFFFE7 !important; /* Couleur chocolat blanc */
     font-family: 'FairWaterScript', cursive, Arial, sans-serif;
     font-size: 1.5em;
-    -webkit-text-stroke: 0.5px black;
+    /* Même technique pour contour si nécessaire */
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
     margin-bottom: 20px;
 }
 
@@ -330,20 +355,20 @@ h4 {
     color: #FFFFE7; /* Couleur chocolat blanc */
     text-decoration: none; /* Pas de soulignement */
     transition: color 0.3s;
-	font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 /* Classe pour styliser une image avec une bordure, des dimensions fixes, et un ajustement du contenu */
 .image-doree {
-    border: 4px solid #DEA62B; /* Ajoute une bordure de 4 pixels d'épaisseur, de couleur dorée autour de l'image */
+    border: 4px solid #DEA62B; /* Ajoute une bordure dorée d'épaisseur 4px */
     width: 300px;               /* Fixe la largeur de l'image à 300 pixels */
     height: 200px;              /* Fixe la hauteur de l'image à 200 pixels */
-    object-fit: cover;          /* L'image sera recadrée pour couvrir entièrement la zone définie, évitant la déformation */
-    display: block;             /* Convertit l'image en élément de type bloc, facilitant la gestion des marges */
-    margin: 10px auto;          /* Ajoute une marge verticale de 10px et centre horizontalement l'image */
+    object-fit: cover;          /* L'image sera recadrée pour couvrir la zone */
+    display: block;             /* Éviter les espaces en ligne */
+    margin: 10px auto;          /* Centrer horizontalement avec marge verticale 10px */
 }
 
-  img {
+img {
   max-width: 100%;
   height: auto;
   display: block;
@@ -353,7 +378,7 @@ h4 {
 .social-buttons {
     display: flex; /* Flexbox pour aligner boutons */
     gap: 10px; /* Espacement entre boutons */
-    margin: 0 0; /* Marges verticales nulles */
+    margin: 0; /* Marges verticales nulles */
     justify-content: center; /* Centrer horizontalement */
     align-items: center; /* Centrer verticalement */
 }
@@ -391,7 +416,7 @@ h4 {
 
 /* Conteneur du formulaire de contact */
 .contact-container {
-    background-color: #5E3200; /* Fond chocolat) */
+    background-color: #5E3200; /* Fond chocolat */
     color: #D4AF37; /* Doré */
     padding: 40px; /* Padding interne */
     border-radius: 10px; /* Coins arrondis */
@@ -408,10 +433,12 @@ h2 {
     color: #D4AF37;
     margin-bottom: 20px;
     font-size: 2em;
+    /* Remplacement de la text-shadow pour contour si nécessaire */
     text-shadow:
-        1px 1px 0 #999,
-        2px 2px 0 #666,
-        3px 3px 0 #333;
+        -1px -1px 0 #999,
+        1px -1px 0 #999,
+        -1px 1px 0 #999,
+        1px 1px 0 #999;
 }
 
 /* Formulaire */
@@ -495,10 +522,11 @@ p {
     line-height: 1.8; /* Espacement pour lecture aisée */
     color: #444; /* Couleur légèrement sombre */
     text-align: justify; /* Justification du texte */
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);/* Ajout d'une légère ombre pour relief */
-    hyphens: auto;/* Permet la césure automatique pour éviter les longues lignes non équilibrées. */
-    text-justify: inter-word;/* Justifie le texte en ajustant l'espacement entre les mots pour une meilleure apparence. */
-    word-break: break-word;/* Permet de couper les mots si nécessaire pour éviter le dépassement de la mise en page. */
+    /* Utiliser text-shadow pour donner un effet de contour si souhaité */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+    overflow-wrap: break-word; /* Norme recommandée pour le découpage des mots */
+    hyphens: auto; /* Permet la césure automatique pour éviter les longues lignes non équilibrées */
+    word-break: break-word; /* Remplacé par overflow-wrap */
 }
 
 /* Paragraphe d'introduction (exemple) */
@@ -553,16 +581,15 @@ p.quote {
   color: #D3D3D3; /* gris clair au hover */
 }
 
+/* Classe pour centrer le texte avec respect des sauts de ligne */
 .texte-centré {
   display: flex;
   flex-direction: column;
   width: 100%;
-  color: #FFFFE7; /* Couleur chocolat blanc */
-  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  white-space: pre-line; /* Permet de respecter les sauts de ligne dans le texte */
+  white-space: pre-line; /* Respecte les sauts de ligne */
   line-height: 0.8; /* Ajustez cette valeur selon vos préférences */
   color: #FFFFE7; /* Couleur chocolat blanc */
 }
@@ -572,16 +599,16 @@ p.quote {
   display: block; /* Transforme en bloc pour forcer un saut de ligne */
 }
 
-/* Couleur chocolat blanc à tous les éléments <p>, <i> et <u> */
+/* Styles pour les éléments internes de texte-centré */
 .texte-centré p,
 .texte-centré i,
 .texte-centré u {
   color: #FFFFE7;
 }
 
-/* Ajoutez cette règle à la fin de votre fichier styles.css */
+/* Bouton recette stylisé */
 .btn-recette {
-  background-color: #DEA62B;; /* couleur dorée */
+  background-color: #DEA62B; /* couleur dorée */
   color: #fff;
   padding: 12px 24px;
   font-size: 1.2em;
@@ -590,21 +617,18 @@ p.quote {
   font-weight: bold;
   transition: background-color 0.3s, transform 0.2s;
 }
-
 .btn-recette:hover {
-  background-color: #B17E1E;  /* ton plus foncé au hover */
+  background-color: #B17E1E; /* ton plus foncé au hover */
   transform: scale(1.05);
 }
 
-/* Grille des recettes */
-/* Section liens */
+/* Grille des recettes - liens */
 .liens-recettes {
   display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
-
 .liens-recettes ul {
   list-style: none;
   padding: 0;
@@ -612,12 +636,9 @@ p.quote {
   max-width: 600px;
   width: 100%;
 }
-
 .liens-recettes li {
   margin: 10px 0;
 }
-
-/* Pour les liens dans recettes.html */
 .liens-recettes a {
   display: block;
   padding: 15px 20px;
@@ -625,13 +646,12 @@ p.quote {
   border-radius: 8px;
   text-decoration: none;
   color: #D4AF37; /* Doré */
-  text-align: center; /* texte centré*/
+  text-align: center;
   font-size: 1.2em;
   font-family: 'FairWaterScript', cursive, Arial, sans-serif;
   border: 2px solid transparent;
   transition: all 0.3s ease;
 }
-
 .liens-recettes a:hover {
   border-color: #DEA62B; /* bordure dorée au hover */
   background-color: #A5694A; /* un peu plus clair au hover */
@@ -639,27 +659,26 @@ p.quote {
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
-
 #liens-recettes-title {
-    margin-top: 20px; /* ou 0 si pas besoin */
+    margin-top: 20px;
     text-align: center;
     font-family: 'FairWaterScript', cursive, Arial, sans-serif;
     font-size: 2em;
     z-index: 10;
 	display: flex;
     flex-direction: column;
-    align-items: center; /* pour centrer le contenu */
+    align-items: center;
     padding: 20px;
 }
 
-/* Centrer le conteneur des commentaires */
+/* Commentaires disqus centré */
 #disqus_thread {
   display: flex;
   justify-content: center; /* Centrer contenu horizontalement */
   align-items: flex-start; /* Alignement en haut */
   margin: 20px auto; /* Centrer la div dans le parent horizontalement */
   background-color: #5E3200 !important; /* Couleur chocolat principal */
-  border-radius: 12px;
+  border-radius: 12px; /* Coins arrondis */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   border: 2px solid #FFD700; /* Bordure dorée */
   max-width: 800px;
@@ -671,6 +690,7 @@ p.quote {
   box-sizing: border-box;
 }
 
+/* Classe pour cacher visuellement */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -678,22 +698,24 @@ p.quote {
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
+    /* clip: rect(0, 0, 0, 0); */ /* Déprécié, supprimer */
+    clip-path: inset(50%); /* Alternative moderne si nécessaire, mais mieux de supprimer */
     white-space: nowrap;
     border: 0;
 }
 
+/* Classe pour souligner, cachée visuellement */
 .souligne {
     text-decoration: underline; /* Style de soulignement */
     margin-left: 20px; /* Marge à gauche pour les titres dans les listes */
     display: none; /* Cache visuellement l'élément */
 }
 
+/* Listes */
 ul {
   list-style-type: circle; /* ou autre style */
   margin-left: 20px; /* indentation */
 }
-
 
 /* ------------------------------------------- FIN DES STYLES GLOBAUX ------------------------------------------- */
 
@@ -718,27 +740,27 @@ ul {
     .recette {
         flex-direction: column;
         align-items: center;
-        padding: 0 20px; /* Padding horizontal */
+        padding: 0 20px;
         box-sizing: border-box;
     }
 
     /* Les cartes des recettes s'adaptent en largeur */
     .card {
-		max-width: 95%; /* ou 100% si vous préférez */
-        flex: 1 1 100%; /* occupe toute la largeur */
-        margin: 10px 0; /* marges verticales pour espacement */
+        max-width: 95%;
+        flex: 1 1 100%;
+        margin: 10px 0;
     }
 
     /* Alignement des éléments en colonne */
     .cartes-alignées {
-	   display: flex; /* assure que c'est un flex container */
-       flex-direction: column; /* empile en colonne */
-       align-items: center; /* centre les cartes horizontalement */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     /* Padding dans la section intro */
     .intro {
-        padding: 0 20px; /* 0 en haut et en bas, 20px à gauche/droite */
+        padding: 0 20px;
         box-sizing: border-box;
     }
 
@@ -748,63 +770,63 @@ ul {
     }
 
     /* Affichage du burger menu en mobile */
-	
-	.burger-menu {
-    display: flex !important;/* S'assurer qu'il s'affiche */
-    width: 30px;
-    height: 25px;
-    flex-direction: column;
-    justify-content: space-around;/* Espacement entre les barres */
-    cursor: pointer;
-    position: fixed;/* Fixé en haut à droite */
-    top: 20px;
-    right: 20px;
-    z-index: 9999;/* Très élevé pour être au-dessus */
-    background: transparent;/* Pas de fond */
-  }
+    .burger-menu {
+        display: flex !important; /* S'assurer qu'il s'affiche */
+        width: 30px;
+        height: 25px;
+        flex-direction: column;
+        justify-content: space-around; /* Espacement entre les barres */
+        cursor: pointer;
+        position: fixed; /* Fixé en haut à droite */
+        top: 20px;
+        right: 20px;
+        z-index: 9999; /* Très élevé */
+        background: transparent; /* Pas de fond */
+    }
 
-  .menu {
-    display: none;
-  }
+    /* Menu déroulant mobile */
+    .menu {
+        display: none;
+    }
 
-  .menu.active {
-    display: block;
-    position: fixed;
-    top: 60px;
-    right: 20px;
-    background: white;
-    padding: 10px;
-    z-index: 9998;
-	}
+    .menu.active {
+        display: block;
+        position: fixed;
+        top: 60px;
+        right: 20px;
+        background: white;
+        padding: 10px;
+        z-index: 9998;
+    }
 
     /* Structure des barres du burger */
     .burger-menu .bar {
         height: 4px; /* Plus épaisses */
         width: 100%;
-        background-color: #fff; /* Blanc */
+        background-color: #fff;
         border-radius: 2px;
         transition: 0.3s;
     }
 
     /* Menu déroulant en mobile */
     .menu-drawer {
-        position: absolute; /* Position absolue */
-        top: calc(100% + 20px); /* Juste en dessous du burger */
-        right: 20px; /* Aligné à droite */
-        width: 250px; /* Largeur du menu */
-        background-color: #5E3200; /* Fond chocolat */
-        box-shadow: 0 2px 8px rgba(0,0,0,0.5); /* Ombre */
-        display: none; /* Caché par défaut */
-        border-radius: 4px; /* Coins arrondis */
-        z-index: 1002; /* Sur le burger et autres éléments */
+        position: absolute;
+        top: calc(100% + 20px);
+        right: 20px;
+        width: 250px;
+        background-color: #5E3200;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        display: none;
+        border-radius: 4px;
+        z-index: 1002;
     }
 
-    /* Menu actif en mobile */
+    /* Menu actif mobile */
     .menu-drawer.active {
-        display: block; /* Afficher quand actif */
+        display: block;
     }
 
-    /* Adaptation du menu principal pour mobile */
+    /* Structure des liens mobile */
     .netflix-menu .menu {
         list-style: none;
         padding: 0 20px;
@@ -828,7 +850,7 @@ ul {
         position: fixed;
         top: 15px;
         right: 20px;
-        display: flex !important; /* Toujours visible en mobile */
+        display: flex !important;
     }
 
     /* Menu déroulant mobile (alternative ou complémentaire) */
@@ -837,7 +859,7 @@ ul {
         flex-direction: column;
         padding: 0;
         margin: 0;
-        background-color: #5E3200; /* Fond chocolat */
+        background-color: #5E3200;
         border-radius: 4px;
     }
 
@@ -849,14 +871,14 @@ ul {
     /* Sous-menu dans mobile si nécessaire */
     ul.submenu {
         position: absolute;
-        top: 0; /* Position par rapport à son parent */
-        right: 60px; /* Ajusté selon besoin */
+        top: 0;
+        right: 60px;
         width: 200px;
-        background-color: #5E3200; /* Fond chocolat */
+        background-color: #5E3200;
         box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-        display: none; /* Peut être modifié pour toujours visible si souhaité */
+        display: none;
         z-index: 1002;
-        color: #fff; /* Couleur du texte */
+        color: #fff;
     }
 
     /* Cacher le menu principal dans le header en mobile */
@@ -875,21 +897,20 @@ ul {
     /* Styles du header */
     header {
         display: flex;
-        flex-direction: column; /* empilement vertical si besoin */
-        align-items: center; /* centrage horizontal */
-        justify-content: center; /* centrage vertical si nécessaire */
-        margin-top: 0; /* ajuster si besoin */
-        padding: 0px; /* éventuellement ajouter padding */
-        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0;
+        padding: 0px;
     }
 
     /* Image dans le header */
     header img {
         max-width: 400px;        
-        height: auto;           /* Maintient les proportions originales */
-        display: block;         /* Évite espaces en ligne */
-        object-fit: contain;    /* Optionnel : pour garantir la complète dans le conteneur sans déformation */
-        max-height: 100%;       /* Limiter la hauteur si nécessaire */    
+        height: auto;           
+        display: block;         
+        object-fit: contain;    
+        max-height: 100%;       
         margin-top: 0;
         margin-bottom: 0;
     }
@@ -898,30 +919,30 @@ ul {
     .contact-container {
         background-color: #5E3200; /* Fond chocolat */
         color: #D4AF37; /* Doré */
-        padding: 40px; /* Padding interne */
-        border-radius: 10px; /* Coins arrondis */
-        max-width: 370px; /* Largeur maximale */
-        width: 100%; /* Prend toute la largeur disponible */
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Ombre légère */
-        margin: auto; /* Centrage horizontal et vertical */
-        margin-top: 120px; /* Espace au-dessus */
+        padding: 40px;
+        border-radius: 10px;
+        max-width: 370px;
+        width: 100%;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        margin: auto;
+        margin-top: 120px;
     }
 
-    /* Style pour textarea */
+    /* Style pour textarea en mobile */
     textarea {
-        font-size: 1.4em; /* Taille plus grande pour mobile */
-        height: 180px; /* Hauteur ajustée */
+        font-size: 1.4em;
+        height: 180px;
         justify-content: center;
     }
 
-    /* Classe pour recette unique, en colonne */
+    /* Recette unique en colonne en mobile */
     .recette-unique {
         flex-direction: column;
         align-items: center;
         padding: 5px;
     }
 
-    /* La carte de recette unique */
+    /* La carte de recette unique en mobile */
     .recette-unique .recette-card {
         width: 100%;
         max-width: 600px;
