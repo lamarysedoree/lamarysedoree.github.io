@@ -127,18 +127,6 @@ ul.submenu li a:hover {
     margin: 0 auto; /* Centrage horizontal */
     width: 100%; /* Prend toute la largeur disponible */
 }
-.content h2 {
-    text-align: center;
-    color: #D4AF37;
-    margin-bottom: 20px;
-    font-size: 40px;
-    /* Remplacement de -webkit-text-stroke par une autre méthode pour le contour si nécessaire */
-    /* Si un contour est indispensable, considérer une ombre portée ou une autre technique */
-    text-shadow:
-        1px 1px 0 #999,
-        2px 2px 0 #666,
-        3px 3px 0 #333;
-}
 
 /* Section présentation dans .content */
 .intro {
@@ -310,6 +298,21 @@ h1 {
     margin-bottom: 20px; /* Espace inférieur */
 }
 
+/* Style époustouflant pour les sous-titres (h2) */
+h2 {
+    text-align: center;
+    color: #D4AF37; /* Couleur dorée */
+    margin-bottom: 30px;
+    font-size:40px; /* Taille amplifiée pour impact */
+    font-family: 'FairWaterScript', cursive, Arial, sans-serif; /* Police élégante et script */
+    letter-spacing: 2px; /* Espacement pour sophistication */
+    padding: 10px 20px;
+	text-shadow:
+        1px 1px 0 #999,
+        2px 2px 0 #666,
+        3px 3px 0 #333;
+}
+
 /* Style pour les sous-titres (h3) */
 h3 {
     font-family: 'FairWaterScript', cursive, Arial, sans-serif;
@@ -424,20 +427,6 @@ img {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Ombre légère */
     margin: auto; /* Centrage horizontal et vertical */
     margin-top: 100px; /* Espace au-dessus */
-}
-
-/* Titre du formulaire */
-h2 {
-    text-align: center;
-    color: #D4AF37;
-    margin-bottom: 20px;
-    font-size: 2em;
-    /* Remplacement de la text-shadow pour contour si nécessaire */
-    text-shadow:
-        -1px -1px 0 #999,
-        1px -1px 0 #999,
-        -1px 1px 0 #999,
-        1px 1px 0 #999;
 }
 
 /* Formulaire */
