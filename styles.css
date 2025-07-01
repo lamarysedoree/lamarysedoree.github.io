@@ -313,15 +313,14 @@ h1 {
 /* Style pour les sous-titres (h3) */
 h3 {
     font-family: 'FairWaterScript', cursive, Arial, sans-serif;
-    font-size: 1.5em;
+    font-size: 1.7em; /* Augmentation de la taille pour plus d'impact */
     color: #5E3200; /* Couleur chocolat */
-    /* Même technique pour contour si besoin */
-    text-shadow:
-        -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
-    margin-bottom: 20px;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.5), /* Ombre douce pour relief */
+        -1px -1px 0 #fff; /* Contour blanc pour faire ressortir le texte */
+    margin-bottom: 30px; /* Plus d'espace en dessous */
+    font-weight: bold; /* Accentuer le texte */
+    letter-spacing: 2px; /* Espacement pour un effet plus sophistiqué */
 }
 
 /* Style pour les petits titres (h4) */
