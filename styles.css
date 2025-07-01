@@ -704,6 +704,71 @@ ul {
   margin-left: 20px; /* indentation */
 }
 
+/* Style pour le bouton ascenseur */
+#scrollButtons {
+  background-color: transparent !important;
+  position: fixed;
+  right: 0px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+/* Style pour chaque bouton ascenseur */
+.scroll-btn {
+  background-color: transparent !important;
+  border: none;
+  padding: 0px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+/* Si vous souhaitez que le contenu soit une image uniquement */
+.scroll-btn img {
+  max-width: 60px;
+  max-height: 60px;
+  display: block;
+}
+
+/* Style pour la croix de fermeture */
+.close-cross {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1003; /* au-dessus du menu */
+    transition: transform 0.3s ease; /* pour la rotation */
+}
+
+/* Animation de rotation rapide lors du clic */
+.close-cross.rotating {
+    animation: rotateFast 0.5s linear forwards;
+}
+@keyframes rotateFast {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* Optionnel : ajuster le style de l'image si nécessaire */
+.croix-image {
+    width: 100%;
+    height: auto;
+}
+
 /* ------------------------------------------- FIN DES STYLES GLOBAUX ------------------------------------------- */
 
 /* =========================== STYLES RESPONSIVE (pour mobiles et petits écrans) =========================== */
@@ -798,7 +863,7 @@ ul {
     /* Menu déroulant en mobile */
     .menu-drawer {
         position: absolute;
-        top: calc(100% + 20px);
+        top: calc(100% + 2px);
         right: 20px;
         width: 250px;
         background-color: #5E3200;
@@ -935,6 +1000,9 @@ ul {
         max-width: 600px;
         margin: 10px auto;
     }
+	#closeCross {
+    display: block;
+  }
 }
 
 /* Styles pour les écrans à partir de 769px (desktop) */
@@ -950,4 +1018,7 @@ ul {
         font-size: 1.1em;
         padding: 12px 16px;
     }
+	#closeCross {
+    display: none;
+  }
 }

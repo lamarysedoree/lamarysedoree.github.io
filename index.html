@@ -48,7 +48,11 @@
              ========================== -->
         <nav>
             <div class="menu-drawer" id="menuDrawer" aria-hidden="true">
-                <ul class="menu">
+    <!-- Croix de fermeture -->
+    <div class="close-cross" id="closeCross" aria-label="Fermer le menu" role="button" tabindex="0">
+        <img src="images/croix.png" alt="Fermer" class="croix-image">
+    </div>
+    <ul class="menu">
                     <li><a href="index.html">Accueil</a></li>
                     <li>
                         <a href="#">Pâtisserie</a>
@@ -224,6 +228,15 @@
                 })();
             </script>
             <noscript>Veuillez activer JavaScript pour voir les commentaires Disqus.</noscript>
+			<!-- Boutons ascenceur-->
+<div id="scrollButtons">
+  <button id="scrollTop" class="scroll-btn">
+    <img src="images/haut.png" alt="Haut">
+  </button>
+  <button id="scrollBottom" class="scroll-btn">
+    <img src="images/bas.png" alt="Bas">
+  </button>
+</div>
         </section>
     </div> <!-- Fin div content -->
 
@@ -259,28 +272,54 @@
             </div><!-- Fin div W3C -->
         </div> <!-- Fin social-buttons -->
     </footer> <!-- Fin footer -->
-
-    <!-- Script pour menu burger -->
+	<!-- Script pour boutons de scroll haut, bas -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const burger = document.getElementById('burger');
-            const menuDrawer = document.getElementById('menuDrawer');
-
-            // Toggle la classe 'active' pour afficher/masquer le menu
-            burger.addEventListener('click', () => {
-                menuDrawer.classList.toggle('active');
-                // Modifier aria-hidden pour l'accessibilité
-                menuDrawer.setAttribute('aria-hidden', String(!menuDrawer.classList.contains('active')));
-            });
-
-            // Fermer le menu si clic en dehors
-            document.addEventListener('click', (e) => {
-                if (!menuDrawer.contains(e.target) && !burger.contains(e.target)) {
-                    menuDrawer.classList.remove('active');
-                    menuDrawer.setAttribute('aria-hidden', 'true');
-                }
-            });
-        });
+    document.getElementById('scrollTop').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+    });
+    document.getElementById('scrollBottom').addEventListener('click', () => {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'auto' });
+    });
     </script>
+	<!-- Script pour menu burger -->
+	<script>
+	document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.getElementById('burger');
+    const menuDrawer = document.getElementById('menuDrawer');
+    const closeCross = document.getElementById('closeCross');
+
+    // Toggle le menu avec burger
+    burger.addEventListener('click', () => {
+        menuDrawer.classList.toggle('active');
+        menuDrawer.setAttribute('aria-hidden', String(!menuDrawer.classList.contains('active')));
+    });
+
+    // Ouvrir/fermer avec clic sur croix
+    closeCross.addEventListener('click', () => {
+        // Ajouter la classe pour animation de rotation
+        closeCross.classList.add('rotating');
+
+        // Lance l'animation
+        closeCross.classList.add('rotating');
+
+        // Lors de la fin de l'animation, fermer le menu
+        closeCross.addEventListener('animationend', () => {
+            // Retirer la classe d'animation pour réinitialiser
+            closeCross.classList.remove('rotating');
+            // Fermer le menu
+            menuDrawer.classList.remove('active');
+            menuDrawer.setAttribute('aria-hidden', 'true');
+        }, { once: true });
+    });
+
+    // Fermer si clic en dehors
+    document.addEventListener('click', (e) => {
+        if (!menuDrawer.contains(e.target) && !burger.contains(e.target)) {
+            menuDrawer.classList.remove('active');
+            menuDrawer.setAttribute('aria-hidden', 'true');
+        }
+    });
+});
+</script>
 </body>
 </html>
