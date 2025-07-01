@@ -230,7 +230,6 @@ ul.submenu li a:hover {
   text-align: left;
   box-sizing: border-box;
   margin: 0 auto; /* pour centrer si besoin */
-  color: #FFFFE7; /* couleur chocolat blanc */
 }
 
 .recette-unique .recette-card {
@@ -242,7 +241,7 @@ ul.submenu li a:hover {
   max-width: 800px;
   padding: 25px; /* espace intérieur */
   margin: 10px; /* ajoute une marge externe pour espacement entre cartes */
-  color: #FFF8DC;
+  color: #FFFFE7; /* couleur chocolat blanc */
   font-family: 'Georgia', serif;
   font-size: 1.2em;
   position: relative;
